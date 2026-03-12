@@ -1,0 +1,22 @@
+<article class="feature-card">
+  <div class="icon-wrapper">
+    <ng-content select="[icon]"></ng-content>
+  </div>
+
+  <div class="content-wrapper">
+    <p class="title">{{ title }}</p>
+    <p class="description">{{ description }}</p>
+  </div>
+
+
+  @if (linkText && linkUrl) {
+  <a [href]="linkUrl" class="feature-link">
+    {{ linkText }}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" class="arrow-icon">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+  }
+</article>
