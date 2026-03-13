@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './pagina1.css',
   standalone: true
 })
-export default class Pagina1 {}
+export class Pagina1 {}
 

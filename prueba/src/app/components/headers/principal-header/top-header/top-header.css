@@ -1,0 +1,97 @@
+/* 1. Contenedor principal: Alineación horizontal */
+#heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Ocultar elementos móviles o modales que no se ven en desktop */
+.xClose,
+#showLeft,
+#serviciosB2CMob {
+  display: none;
+}
+
+/* 2. Navegación (Menú central) */
+.navB2B ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px; /* Espacio entre los enlaces */
+}
+
+.navB2B a {
+  text-decoration: none;
+  color: #555555; /* Color gris oscuro nativo */
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navB2B a:hover {
+  color: #3a913f; /* Verde Cetelem */
+}
+
+/* Estado activo ("PARA TI") */
+.navB2B a.active {
+  color: #3a913f;
+}
+
+/* Línea verde inferior para el elemento activo */
+.navB2B a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Ajusta la distancia de la línea al texto */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3a913f;
+}
+
+/* Línea separadora gris entre "Para ti" y "Comercios" */
+.navB2B li:first-child {
+  position: relative;
+  padding-right: 24px; /* Espacio extra para la línea */
+}
+
+.navB2B li:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background-color: #cccccc;
+}
+
+
+.liContacto a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el icono y el texto */
+  color: #007c3e; /* Verde más oscuro de la imagen */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Dibujamos el icono de los cascos con SVG directamente en CSS */
+.atencionIcon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007c3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
