@@ -1,11 +1,15 @@
 <article class="feature-card">
-  <div class="icon-wrapper">
-    <ng-content select="[icon]"></ng-content>
+  <div class="icon-wrapper-1">
+    <ng-content select="[icon1]"></ng-content>
   </div>
 
+  <div class="icon-wrapper-2">
+    <ng-content select="[icon2]"></ng-content>
+  </div>
+  
   <div class="content-wrapper">
-    <h1 class="title">{{ title }}</h1>
-    <p class="description">{{ description }}</p>
+    <h1 class="title">{{ title() }}</h1>
+    <p class="description">{{ description() }}</p>
   </div>
 
 

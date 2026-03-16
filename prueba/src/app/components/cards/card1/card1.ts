@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card1',
@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card1.css',
 })
 export class Card1 {
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) description!: string;
+  //@Input({ required: true }) title!: string;
+  readonly title = input.required<string>();
+  readonly description = input.required<string>();  
   
   // Propiedades opcionales para el enlace
   @Input() linkText?: string;
