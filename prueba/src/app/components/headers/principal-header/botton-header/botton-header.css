@@ -1,21 +1,17 @@
 /* 1. Contenedor principal de la barra de navegación */
-#headerBttm {
+.headerBttm {
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0; /* Opcional: una línea sutil abajo */
+  border-bottom: 1px solid #e0e0e0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
-#navbar {
+.navbar {
   max-width: 1200px; /* Ajusta este ancho según el contenedor de tu web */
   margin: 0 auto;
   padding: 0 40px;
-}
-
-/* Ocultar botón cerrar en desktop */
-.xClose {
-  display: none;
 }
 
 /* 2. Lista principal (Flexbox) */
@@ -29,9 +25,9 @@
   height: 60px; /* Altura de la barra */
 }
 
-/* Elementos de la lista principal */
 .nav.navbar-nav > li.mega-dropdown {
-  margin-right: 32px; /* Espacio entre los enlaces principales */
+  margin-right: 32px;
+  position: static;
 }
 
 /* Enlaces principales ("Préstamos", "Tarjeta", etc.) */
@@ -45,11 +41,7 @@
   height: 100%;
 }
 
-/* Ocultar imágenes nativas y flechas que no están en tu diseño final */
-.nav.navbar-nav > li.mega-dropdown > a img,
-.nav.navbar-nav > li.mega-dropdown > a i {
-  display: none;
-}
+
 
 /* Hover de los enlaces principales (opcional, puse el verde corporativo) */
 .nav.navbar-nav > li.mega-dropdown > a:hover {
