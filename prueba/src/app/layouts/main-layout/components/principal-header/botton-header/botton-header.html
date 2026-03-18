@@ -1,0 +1,92 @@
+<div class="headerBttm">
+    <nav role="navigation" aria-label="Menú principal">
+        <div class="navbar">
+            <ul class="nav navbar-nav" aria-label="Páginas del sitio web" role="menubar">
+                <li class="mega-dropdown" id="layout_6" role="presentation"
+                    (mouseenter)="abrirMenu('prestamos')" (mouseleave)="cerrarMenu()" (focusin)="abrirMenu('prestamos')"
+                    (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
+
+
+                    <a aria-labelledby="layout_6" href="/prestamos" role="menuitem"
+                        aria-label="Ir a la sección Préstamos" [attr.aria-expanded]="menuActivo() === 'prestamos'"
+                        aria-haspopup="menu">
+                        Préstamos
+                    </a>
+
+                    @if (menuActivo() === 'prestamos') {
+                        <app-sub-menu [data]="dataPrestamos" [isVisible]="true"></app-sub-menu>
+                    }
+
+
+                </li>
+                <li class="mega-dropdown" id="layout_14" role="presentation">
+                    <a  aria-labelledby="layout_14" href="/tarjetas" role="menuitem"
+                        aria-label="Ir a la sección Tarjetas">
+                        <span>Tarjeta</span>
+                    </a>
+                </li>
+                <li class="mega-dropdown" id="layout_467" role="presentation"
+                    (mouseenter)="abrirMenu('cuentas')" (mouseleave)="cerrarMenu()" (focusin)="abrirMenu('cuentas')"
+                    (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
+                    <a class="dropdown-toggle" aria-labelledby="layout_467" href="/cuentas-corrientes" role="menuitem"
+                        aria-label="Ir a la sección Cuentas" [attr.aria-expanded]="menuActivo() === 'cuentas'"
+                        aria-haspopup="menu">
+                        <span>Cuentas</span>
+                    </a>
+
+                    @if (menuActivo() === 'cuentas') {
+                        <app-sub-menu [data]="dataCuentas" [isVisible]="true"></app-sub-menu>
+                    }
+
+                </li>
+                <li class="mega-dropdown" id="layout_520" role="presentation">
+                    <a class="dropdown-toggle" aria-labelledby="layout_520"
+                        href="/ahorro-y-depositos-cetelem" role="menuitem" aria-label="Ir a la sección Depósitos">
+                        <span> Depósitos</span>
+                    </a>
+                </li>
+                <li class="mega-dropdown" id="layout_15" role="presentation"
+                    (mouseenter)="abrirMenu('seguros')" (mouseleave)="cerrarMenu()" (focusin)="abrirMenu('seguros')"
+                    (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
+                    <a class="dropdown-toggle" aria-labelledby="layout_15" href="/seguros"
+                        role="menuitem" aria-label="Ir a la sección Seguros" [attr.aria-expanded]="menuActivo() === 'seguros'"
+                        aria-haspopup="menu">
+                        <span>Seguros</span>
+
+                        @if (menuActivo() === 'seguros') {
+                            <app-sub-menu [data]="dataSeguros" [isVisible]="true"></app-sub-menu>
+                        }
+                    </a>
+                </li>
+                <li class="mega-dropdown" id="layout_34" role="presentation">
+                    <a class="dropdown-toggle" aria-labelledby="layout_34" href="/mis-solicitudes"
+                        role="menuitem" aria-label="Ir a la sección Mis Solicitudes">
+                        <span>Mis Solicitudes</span>
+                    </a>
+                </li>
+                <li class="mega-dropdown" id="layout_61" role="presentation">
+                    <a class="dropdown-toggle" aria-labelledby="layout_61" href="/credito-zoom"
+                        role="menuitem" aria-label="Ir a la sección Blog">
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                <!-- Enlaces Contacto y espacio cliente -->
+                <li class="navlinksContacto" role="presentation">
+                    <a role="menuitem" href="https://www.zonacliente.cetelem.es/homebankingCetelem/contacta.htm"
+                        rel="noopener noreferrer" aria-label="Contacta con nosotros. Te ayudamos en tres pasos">
+                        <span class="icon contactIcon"></span>
+                        <span>Contacto</span>
+                    </a>
+                    
+                    <a role="menuitem" href="https://www.zonacliente.cetelem.es/homebankingCetelem/login.htm"
+                        target="_blank" rel="noopener noreferrer" aria-label="Accede al Espacio Cliente">
+                        <span class="icon clientIcon"></span>
+                        <span>Espacio cliente</span>
+                        <span class="sr-only">El enlace se abrirá en una pestaña nueva</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

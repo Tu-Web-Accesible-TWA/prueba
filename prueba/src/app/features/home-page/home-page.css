@@ -1,0 +1,22 @@
+.features-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 120px;
+  -moz-column-gap: 120px;
+  column-gap: 120px;
+  row-gap: 64px;
+  width: 50%;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: rgb(194, 238, 238);
+  padding: 0.5rem;
+}
+
+.accordions{
+  width: 50%;
+}

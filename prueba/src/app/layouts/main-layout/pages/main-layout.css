@@ -1,0 +1,10 @@
+header{
+    padding: 1rem;
+    width: 100%;
+}
+
+p {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+}

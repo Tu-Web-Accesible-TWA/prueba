@@ -1,15 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-html, body{
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 1200px; /* Ajusta este ancho según el contenedor de tu web */
-  margin: 0 auto;
-  padding: 0 40px;
+    max-width: 1280px;
+    min-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
