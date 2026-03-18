@@ -9,7 +9,7 @@ import { SubMenu } from '../sub-menu/sub-menu';
 })
 export class BottonHeader {
   menuActivo = signal<string | null>(null);
-  private timeoutId: any;
+  private timeoutId!: ReturnType<typeof setTimeout>;
 
   dataPrestamos: SubmenuData = {
     title: 'Préstamos',
@@ -48,15 +48,14 @@ export class BottonHeader {
 
 
   abrirMenu(menu: string) {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-    }
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+    
     this.menuActivo.set(menu);
   }
 
   cerrarMenu() {
     this.timeoutId = setTimeout(() => {
-      this.menuActivo.set(null); // Limpiamos la signal
+      this.menuActivo.set(null);
     }, 150);
   }
 }
