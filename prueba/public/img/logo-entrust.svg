@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.48" height="56.518" viewBox="0 0 121.48 56.518">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.2" stop-color="#c6168d"/>
+      <stop offset="0.8" stop-color="#762b8a"/>
+    </linearGradient>
+  </defs>
+  <g id="Heroes" transform="translate(-33.035 -18)">
+    <g id="Industries">
+      <g id="Component-_-nav-_-main-Tagline-Indicator-Industries" data-name="Component-/-nav-/-main-Tagline-Indicator-Industries">
+        <g id="img-entrust-logo">
+          <g id="Logo">
+            <g id="Group" transform="translate(75.509 18)">
+              <path id="Shape" d="M17.109,39.507,0,29.63V9.877L17.109,0,34.216,9.877V29.632ZM31.463,28.042V11.465L17.107,3.178,2.751,11.465V28.042l14.356,8.287Z" fill="#762b8a"/>
+              <path id="Path" d="M19.817,28.882v-2.77L28.7,20.943V18.192l-8.887,5.118V20.558l8.9-5.115,0-2.388-11.6-6.7L5.5,13.055v13.4l11.605,6.7,11.605-6.7V23.7Z" fill="url(#linear-gradient)"/>
+            </g>
+            <g id="Group-2" data-name="Group" transform="translate(33 61.2)">
+              <path id="Path-2" data-name="Path" d="M13.428,12.979H.035V.475H12.989V3.226H3.008V5.111h6.94V7.855H3.01v2.373H13.428Z" fill="#3f454f"/>
+              <path id="Path-3" data-name="Path" d="M17.422.475v12.5H20.4V3.72l7.55,9.259H31.88V.475H28.9V9.744L21.355.475Z" fill="#3f454f"/>
+              <path id="Path-4" data-name="Path" d="M35.4.475V3.223h5.652v9.756h2.976V3.223h5.656V.475Z" fill="#3f454f"/>
+              <path id="Path-5" data-name="Path" d="M107.231.475V3.223h5.652v9.756h2.976V3.223h5.656V.475Z" fill="#3f454f"/>
+              <path id="Shape-2" data-name="Shape" d="M63.115.472a4.593,4.593,0,0,1,3.238,1.109,3.852,3.852,0,0,1,1.2,2.974,3.588,3.588,0,0,1-2.73,3.8h0l3.3,4.621H64.657l-3.1-4.351H56.193v4.351H53.215V.47h9.9ZM56.193,3.226V5.88h6.4c1.775,0,1.932-.629,1.932-1.337,0-.8-.513-1.318-1.837-1.318H56.193Z" fill="#3f454f"/>
+              <path id="Path-6" data-name="Path" d="M79.184,10.574c3.872,0,4.234-1.324,4.234-2.468V.477h2.974V8.749c0,2.96-3.173,4.569-7.206,4.569h0c-4.035,0-7.206-1.611-7.206-4.569V.477h2.974V8.106c-.005,1.142.358,2.468,4.228,2.468Z" fill="#3f454f"/>
+              <path id="Path-7" data-name="Path" d="M102.4,4.12l1.856-1.96c-2.514-2-5.7-1.944-6.577-2S90.9-.021,90.632,3.988C90.452,6.71,93.049,7.6,97.226,7.7s4.351.829,4.346,1.286c0,.492-.534,1.591-4.272,1.531a9.3,9.3,0,0,1-5.621-1.837l-1.664,2.179a11.766,11.766,0,0,0,7.57,2.333c3.741,0,6.956-.971,7.125-4.031.2-3.558-3.435-3.98-6.751-4.253-3.2-.263-4.213-.349-4.2-1.14.01-.874,2.431-.988,4.1-.9A10.059,10.059,0,0,1,102.4,4.12Z" fill="#3f454f"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

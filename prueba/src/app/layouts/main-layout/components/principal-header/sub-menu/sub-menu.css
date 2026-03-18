@@ -118,6 +118,5 @@
 }
 
 .icon-car::after {
-  content: 'Hola';
-  background-color: red;
+  content: 'icono';
 }

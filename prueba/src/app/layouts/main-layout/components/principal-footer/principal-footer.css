@@ -1,4 +1,172 @@
-p{
-  background-color: red;
-  padding: 0.5rem;
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.contentInfo {
+  font-family: 'Open Sans', Arial, sans-serif; /* Tipografía limpia estándar */
+ /* Ancho máximo para centrar el contenido */
+  margin: 0 auto;
+  padding: 64px 5.7% 40px;
+  box-sizing: border-box;
+  border-top: 1px solid #f5f5f7;
+}
+
+.contentInfo * {
+  box-sizing: border-box;
+}
+
+/* ==== FILA SUPERIOR (Logos, Enlaces y Redes Sociales) ==== */
+.contentInfo > .row:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaeaea; /* Línea sutil de separación horizontal */
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+/* 1. Logo Principal */
+.dvLogo {
+  flex: 0 0 25%;
+}
+
+.dvLogo img {
+  width: 165px;
+}
+
+/* 2. Columna: Contenidos Cetelem */
+.dvContenidosCTLM {
+  flex: 0 0 39%;
+}
+
+.dvContenidosCTLM h2, .dvRRSS h2 {
+  font-size: 15px;
+  color: #4b4f54;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.dvContenidosCTLM ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide los enlaces en dos columnas exactas */
+  row-gap: 15px;
+  column-gap: 20px;
+}
+.dvContenidosCTLM a {
+  color: #777;
+  text-decoration: underline; /* Los enlaces en la imagen tienen subrayado */
+  font-size: 14px;
+}
+.dvContenidosCTLM a:hover {
+  color: #333;
+}
+
+/* 3. Columna: Síguenos (Redes Sociales) */
+.dvRRSS {
+  flex: 0 0 35.6%;
+}
+.dvRRSS ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.dvRRSS a {
+  color: #c4c4c4; /* Gris claro calcado de la imagen */
+  text-decoration: none;
+  font-size: 22px; /* Tamaño base para los FontAwesome */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+.dvRRSS a:hover {
+  color: #777;
+}
+.dvRRSS svg {
+  fill: currentColor; /* El SVG de 'X' hereda el gris claro del enlace */
+  width: 18px;
+  height: 18px;
+}
+
+/* ==== FILA INFERIOR (Textos Legales y Sellos) ==== */
+.contentInfo > .row:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Párrafos explicativos a la izquierda */
+.dvBttmFooterLft {
+  flex: 0 0 60%;
+}
+.dvBttmFooterLft p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888;
+  margin: 0 0 10px 0;
+}
+
+/* Sellos y certificaciones a la derecha */
+.dvBttmFooterRght {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: flex-end; /* Alinea los logos a la derecha */
+  align-items: center;
+  gap: 30px;
+}
+.dvBttmFooterRght img {
+  width: 60px;
+}
+
+.row.dvBttmFooter {
+  flex: 0 0 100%;
+  margin-top: 35px;
+}
+.row.dvBttmFooter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los enlaces bajen de línea si no caben */
+  gap: 15px 35px;
+}
+.row.dvBttmFooter li a {
+  color: #777;
+  text-decoration: underline;
+  font-size: 12px;
+}
+.row.dvBttmFooter li strong a {
+  font-weight: 700;
+  color: #666;
+}
+.row.dvBttmFooter li a:hover {
+  color: #333;
+}
+.row.dvBttmFooter p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+.row.dvBttmFooter p a {
+  color: #888;
+  text-decoration: none;
+}
+
+/* ==== RESPONSIVE (MÓVILES Y TABLETS) ==== */
+@media (max-width: 900px) {
+  .dvLogo, .dvContenidosCTLM, .dvRRSS, .dvBttmFooterLft, .dvBttmFooterRght {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+  .dvBttmFooterRght {
+    justify-content: flex-start; /* En móvil, alinea los sellos a la izquierda */
+    flex-wrap: wrap;
+  }
+  footer[role="contentinfo"] > .row:first-of-type {
+    padding-bottom: 10px;
+  }
 }

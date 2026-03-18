@@ -13,11 +13,8 @@
                         Préstamos
                     </a>
 
-                    @if (menuActivo() === 'prestamos') {
-                        <app-sub-menu [data]="dataPrestamos" [isVisible]="true"></app-sub-menu>
-                    }
-
-
+                    <app-sub-menu [data]="dataPrestamos" [isVisible]="menuActivo() === 'prestamos'"></app-sub-menu>
+                    
                 </li>
                 <li class="mega-dropdown" id="layout_14" role="presentation">
                     <a  aria-labelledby="layout_14" href="/tarjetas" role="menuitem"
@@ -33,10 +30,8 @@
                         aria-haspopup="menu">
                         <span>Cuentas</span>
                     </a>
-
-                    @if (menuActivo() === 'cuentas') {
-                        <app-sub-menu [data]="dataCuentas" [isVisible]="true"></app-sub-menu>
-                    }
+                    
+                    <app-sub-menu [data]="dataCuentas" [isVisible]="menuActivo() === 'cuentas'"></app-sub-menu>
 
                 </li>
                 <li class="mega-dropdown" id="layout_520" role="presentation">
@@ -53,9 +48,8 @@
                         aria-haspopup="menu">
                         <span>Seguros</span>
 
-                        @if (menuActivo() === 'seguros') {
-                            <app-sub-menu [data]="dataSeguros" [isVisible]="true"></app-sub-menu>
-                        }
+                        <app-sub-menu [data]="dataSeguros" [isVisible]="menuActivo() === 'seguros'"></app-sub-menu>
+                        
                     </a>
                 </li>
                 <li class="mega-dropdown" id="layout_34" role="presentation">
