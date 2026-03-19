@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomePage } from './features/home-page/home-page';
+import { HomePage } from './features/home-page/pages/home-page';
 import { NotFOund } from './features/not-found/not-found';
 import { MainLayout } from './layouts/main-layout/pages/main-layout';
 import { SecondaryLayout } from './layouts/secondary-layout/pages/secondary-layout';
@@ -9,8 +9,7 @@ export const routes: Routes = [
     path: '',
     component: MainLayout,
     children: [
-      { path: '', component: HomePage },
-      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '', component: HomePage }
     ]
   },
   {

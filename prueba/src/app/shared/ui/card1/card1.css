@@ -7,16 +7,7 @@
   max-width: 300px; /* Ajusta según el diseño de tu grid */
 }
 
-.icon-wrapper2 ::ng-deep svg {
-  width: 64px;
-  height: 93px;
-  stroke: #2e7d32; /* Verde oscuro estilo Cetelem */
-  fill: none;
-}
-
-.icon-wrapper1 ::ng-deep svg {
-  width: 40px;
-  height: 40px;
+.icon-wrapper ::ng-deep svg {
   stroke: #2e7d32; /* Verde oscuro estilo Cetelem */
   fill: none;
 }

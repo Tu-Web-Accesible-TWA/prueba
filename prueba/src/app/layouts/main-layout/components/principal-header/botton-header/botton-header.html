@@ -47,10 +47,9 @@
                         role="menuitem" aria-label="Ir a la sección Seguros" [attr.aria-expanded]="menuActivo() === 'seguros'"
                         aria-haspopup="menu">
                         <span>Seguros</span>
-
-                        <app-sub-menu [data]="dataSeguros" [isVisible]="menuActivo() === 'seguros'"></app-sub-menu>
-                        
                     </a>
+
+                    <app-sub-menu [data]="dataSeguros" [isVisible]="menuActivo() === 'seguros'"></app-sub-menu>
                 </li>
                 <li class="mega-dropdown" id="layout_34" role="presentation">
                     <a class="dropdown-toggle" aria-labelledby="layout_34" href="/mis-solicitudes"
