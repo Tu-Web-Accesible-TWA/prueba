@@ -1,10 +1,9 @@
-<header>
-    @if (responsive.isMobile()){
-        <p>Soy el Header de movil</p>
-    } @else {
-        <app-principal-header />
-    }
-</header>
+
+@if (responsive.isMobile()){
+    <p>Soy el Header de movil</p>
+} @else {
+    <app-principal-header />
+}
 
 <router-outlet />
 

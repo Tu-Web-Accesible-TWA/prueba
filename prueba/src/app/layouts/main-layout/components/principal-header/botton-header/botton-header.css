@@ -6,11 +6,15 @@
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   position: relative;
+  padding-left: 5.94%;
+    padding-right: 8.7%;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .navbar {
   margin: 0 auto;
-  padding: 0 40px;
+  max-width: 1280px;
 }
 
 /* 2. Lista principal (Flexbox) */
@@ -84,4 +88,17 @@
 /* Icono "Espacio cliente" (Silueta persona) */
 .clientIcon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007c3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+}
+
+/* Asegura que el submenú se posicione respecto a la barra fija */
+.headerBttm.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    /* Añadimos una sombra suave para dar profundidad al hacer scroll */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }

@@ -1,13 +1,34 @@
 /* 1. Contenedor principal: Alineación horizontal */
 .heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
-  width: 100%;
   
+    background-color: #fff;
+    display: table;
+    float: none;
+    overflow: visible;
+    padding-left: 5.94%;
+    padding-right: 5.7%;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+
+}
+
+.dvLogo {
+    float: left;
+    padding: 20px 5% 0 0;
+    vertical-align: middle;
+    width: 12%;
+}
+
+.navB2B{
+  
+    float: left;
+    margin-left: 4%;
+    margin-top: 40px;
+    min-width: 400px;
+    vertical-align: middle;
+    width: 52%;
+
 }
 
 /* 2. Navegación (Menú central) */
@@ -66,6 +87,15 @@
   width: 1px;
   height: 16px;
   background-color: #cccccc;
+}
+
+.liContacto {
+    float: right;
+    padding: 13px 3.6%;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
 }
 
 

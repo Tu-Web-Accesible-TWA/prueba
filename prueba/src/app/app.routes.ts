@@ -9,15 +9,16 @@ export const routes: Routes = [
     path: '',
     component: MainLayout,
     children: [
-      { path: '', component: HomePage }
+      { path: '', component: HomePage, title: 'Inicio' },
+      { path: 'prestamos', loadChildren: () => import ('./features/prestamos/prestamos.routes').then(m => m.prestamosRoutes)},
+      { path: '**', component: NotFOund, title: 'Not Found'}
     ]
   },
   {
-    path: 'cuentas',
+    path: 'cuentas-corrientes',
     component: SecondaryLayout,
     children: [
       { path:'', loadComponent: () => import ('./features/pagina1/pagina1').then(m => m.Pagina1)}
     ]
-  },
-  { path: '**', component: NotFOund}
+  }
 ];

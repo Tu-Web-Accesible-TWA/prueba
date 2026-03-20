@@ -1,15 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { SubMenu } from '../sub-menu/sub-menu';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-botton-header',
-  imports: [SubMenu],
+  imports: [SubMenu, RouterLink],
   templateUrl: './botton-header.html',
   styleUrl: './botton-header.css',
 })
 export class BottonHeader {
   menuActivo = signal<string | null>(null);
   private timeoutId!: ReturnType<typeof setTimeout>;
+  fixed = false;
 
   dataPrestamos: SubmenuData = {
     title: 'Préstamos',
@@ -17,8 +19,8 @@ export class BottonHeader {
     buttonText: 'Conoce los préstamos Cetelem',
     buttonUrl: '/prestamos',
     items: [
-      { label: 'Coche', url: '/prestamos/coche', iconClass: 'icon-car' },
-      { label: 'Reforma y hogar', url: '/prestamos/reforma', iconClass: 'icon-home' }
+      { label: 'Coche', url: '/prestamos/prestamo-coche', iconClass: 'icon-car' },
+      { label: 'Reforma y hogar', url: '/prestamos/prestamo-reforma', iconClass: 'icon-home' }
     ]
   };
 
@@ -45,6 +47,17 @@ export class BottonHeader {
       { label: 'Senior', url: '/seguros/senior', iconClass: 'icon-cane' }
     ]
   };
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Definimos a partir de cuántos píxeles se activa (ej: la altura del top-header)
+    // Si el top-header mide 100px, ponemos 100.
+    const threshold = 100; 
+    
+    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    this.fixed = scrollOffset > threshold;
+  }
 
 
   abrirMenu(menu: string) {

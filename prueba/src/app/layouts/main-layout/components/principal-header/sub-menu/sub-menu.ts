@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sub-menu',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './sub-menu.html',
   styleUrl: './sub-menu.css',
 })

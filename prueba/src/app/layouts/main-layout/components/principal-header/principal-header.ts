@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { TopHeader } from './top-header/top-header';
 import { BottonHeader } from './botton-header/botton-header';
+import { HostListener } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-principal-header',
@@ -8,4 +11,6 @@ import { BottonHeader } from './botton-header/botton-header';
   templateUrl: './principal-header.html',
   styleUrl: './principal-header.css',
 })
-export class PrincipalHeader {}
+export class PrincipalHeader {
+  
+}

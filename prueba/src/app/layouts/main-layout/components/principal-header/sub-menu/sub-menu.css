@@ -8,7 +8,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   padding: 2.5rem;
-  z-index: 1000;
+  z-index: 1001;
   
   /* Layout interno en 2 grandes columnas */
   display: flex;

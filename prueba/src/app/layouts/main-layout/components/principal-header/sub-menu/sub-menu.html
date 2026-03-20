@@ -4,7 +4,7 @@
     <div class="submenu-left-col">
       <img [src]="data().imageUrl" [alt]="'Imagen de ' + data().title" class="submenu-image">
       
-      <a [href]="data().buttonUrl" class="btn-outline-green">
+      <a [routerLink]="data().buttonUrl" class="btn-outline-green">
         {{ data().buttonText }}
       </a>
     </div>
@@ -15,7 +15,7 @@
       <ul class="submenu-links" [attr.aria-labelledby]="'submenu-title-' + data().title">
         @for (item of data().items; track item.label) {
           <li>
-            <a [href]="item.url">
+            <a [routerLink]="item.url">
               <i [class]="item.iconClass" aria-hidden="true"></i>
               <span>{{ item.label }}</span>
             </a>

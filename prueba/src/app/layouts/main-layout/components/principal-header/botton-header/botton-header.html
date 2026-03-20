@@ -1,4 +1,4 @@
-<div class="headerBttm">
+<div class="headerBttm" [class.fixed]="fixed">
     <nav role="navigation" aria-label="Menú principal">
         <div class="navbar">
             <ul class="nav navbar-nav" aria-label="Páginas del sitio web" role="menubar">
@@ -7,12 +7,12 @@
                     (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
 
 
-                    <a aria-labelledby="layout_6" href="/prestamos" role="menuitem"
+                    <a aria-labelledby="layout_6" routerLink="/prestamos" role="menuitem"
                         aria-label="Ir a la sección Préstamos" [attr.aria-expanded]="menuActivo() === 'prestamos'"
                         aria-haspopup="menu">
                         Préstamos
                     </a>
-
+                    
                     <app-sub-menu [data]="dataPrestamos" [isVisible]="menuActivo() === 'prestamos'"></app-sub-menu>
                     
                 </li>
