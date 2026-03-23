@@ -8,10 +8,19 @@ export const routes: Routes = [
   {
     path: '',
     component: MainLayout,
+    data: { breadcrumb: 'Inicio' },
     children: [
-      { path: '', component: HomePage, title: 'Inicio' },
-      { path: 'prestamos', loadChildren: () => import ('./features/prestamos/prestamos.routes').then(m => m.prestamosRoutes)},
-      { path: '**', component: NotFOund, title: 'Not Found'}
+      { path: '', 
+        component: HomePage, 
+        title: 'Inicio'
+      },
+      { path: 'prestamos', 
+        loadChildren: () => import ('./features/prestamos/prestamos.routes').then(m => m.prestamosRoutes)
+      },
+      { path: '**', 
+        component: NotFOund, 
+        title: 'Not Found'
+      }
     ]
   },
   {

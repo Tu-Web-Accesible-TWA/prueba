@@ -1,0 +1,28 @@
+services:
+  # Tu aplicación Angular
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # No exponemos puertos al exterior aquí para que solo Caddy hable con él
+    expose:
+      - "8080"
+
+  # Servidor Caddy para red local
+  gateway:
+    image: caddy:2.7-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"     # HTTP
+      - "443:443"   # HTTPS (por si activas SSL local)
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - angular-app
+
+volumes:
+  caddy_data:
+  caddy_config:

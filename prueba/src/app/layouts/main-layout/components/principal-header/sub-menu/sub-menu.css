@@ -116,7 +116,3 @@
   outline: 2px solid #287a38;
   outline-offset: -2px;
 }
-
-.icon-car::after {
-  content: 'icono';
-}

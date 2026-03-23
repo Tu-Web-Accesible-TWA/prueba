@@ -1,0 +1,56 @@
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 10px 80px 80px 80px;
+  margin: 0;
+  font-family: "Ubuntu", Arial, sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  li {
+    display: flex;
+    align-items: center;
+    color: #333;
+
+    /* Estilo para el icono de la casita (primer elemento) */
+    &:first-child {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #f4f7f6;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232d7a4d' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #00664f; /* Verde oscuro */
+      font-weight: 400;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #2d7a4d;
+        text-decoration: underline;
+      }
+    }
+
+    .active {
+      color: #444;
+      font-weight: 400;
+    }
+
+    .separator {
+      margin: 0 15px;
+      color: #00664f;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+}
