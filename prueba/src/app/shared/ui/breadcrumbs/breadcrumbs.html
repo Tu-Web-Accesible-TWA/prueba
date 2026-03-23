@@ -6,7 +6,7 @@
           <a [routerLink]="bc.url">{{ bc.label }}</a>
           <span class="separator"> \ </span>
         } @else {
-          <a class="active" [routerLink]="bc.url" aria-current="page">{{ bc.label }}</a>
+          <span class="active" [routerLink]="bc.url" aria-current="page">{{ bc.label }}</span>
         }
       </li>
     }
