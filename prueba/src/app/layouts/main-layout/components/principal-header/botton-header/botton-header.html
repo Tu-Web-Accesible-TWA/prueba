@@ -17,7 +17,7 @@
                     
                 </li>
                 <li class="mega-dropdown" id="layout_14" role="presentation">
-                    <a  aria-labelledby="layout_14" href="/tarjetas" role="menuitem"
+                    <a  aria-labelledby="layout_14" routerLink="/tarjetas" role="menuitem"
                         aria-label="Ir a la sección Tarjetas">
                         <span>Tarjeta</span>
                     </a>
@@ -25,7 +25,7 @@
                 <li class="mega-dropdown" id="layout_467" role="presentation"
                     (mouseenter)="abrirMenu('cuentas')" (mouseleave)="cerrarMenu()" (focusin)="abrirMenu('cuentas')"
                     (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
-                    <a class="dropdown-toggle" aria-labelledby="layout_467" href="/cuentas-corrientes" role="menuitem"
+                    <a class="dropdown-toggle" aria-labelledby="layout_467" routerLink="/cuentas-corrientes" role="menuitem"
                         aria-label="Ir a la sección Cuentas" [attr.aria-expanded]="menuActivo() === 'cuentas'"
                         aria-haspopup="menu">
                         <span>Cuentas</span>

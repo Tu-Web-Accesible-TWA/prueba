@@ -1,13 +1,24 @@
 <section class="swiper-viewport">
-    <swiper-container pagination="true" navigation="true" loop="true" class="mySwiper" init="true">
+    <swiper-container #swiper pagination="true" navigation="true" loop="false" class="mySwiper" init="true"
+        autoplay="true">
         <swiper-slide>
-            
-                <app-slide-depositos />
-            
+
+            <app-slide-depositos />
+
         </swiper-slide>
-        
+
         <swiper-slide>
             <app-slide-depositos-1 />
         </swiper-slide>
+
+        <swiper-slide>
+            <app-slide-depositos-1 />
+        </swiper-slide>
+
+        
     </swiper-container>
+
+    <button (click)="toggleAutoplay()" class="control-btn">
+            {{ isPlaying() ? '⏸ Pausar' : '▶️ Iniciar' }}
+        </button>
 </section>

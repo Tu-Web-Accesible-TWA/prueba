@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
-  selector: 'details',
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'details[custom]',
   imports: [],
   templateUrl: './details.html',
   styleUrl: './details.css',
 })
 
 export class Details {
+
 }

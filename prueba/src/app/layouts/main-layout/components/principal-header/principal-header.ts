@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { TopHeader } from './top-header/top-header';
 import { BottonHeader } from './botton-header/botton-header';
-import { HostListener } from '@angular/core';
-
-
 
 @Component({
   selector: 'app-principal-header',

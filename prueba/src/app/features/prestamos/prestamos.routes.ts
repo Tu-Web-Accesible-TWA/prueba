@@ -3,7 +3,6 @@ import { Routes } from "@angular/router";
 export const prestamosRoutes: Routes = [
   {
     path: '',
-    title: 'Préstamos',
     data: { breadcrumb: 'Préstamos' },
     children: [
       {

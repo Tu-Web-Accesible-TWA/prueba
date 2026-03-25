@@ -10,16 +10,18 @@ export const routes: Routes = [
     component: MainLayout,
     data: { breadcrumb: 'Inicio' },
     children: [
-      { path: '', 
-        component: HomePage, 
+      {
+        path: '',
+        component: HomePage,
         title: 'Inicio'
       },
-      { path: 'prestamos', 
-        loadChildren: () => import ('./features/prestamos/prestamos.routes').then(m => m.prestamosRoutes)
+      {
+        path: 'prestamos',
+        loadChildren: () => import('./features/prestamos/prestamos.routes').then(m => m.prestamosRoutes),
       },
-      { path: '**', 
-        component: NotFOund, 
-        title: 'Not Found'
+      {
+        path: 'tarjetas',
+        loadChildren: () => import('./features/tarjeta/tarjeta.routes').then(m => m.tarjetaRoutes)
       }
     ]
   },
@@ -27,7 +29,12 @@ export const routes: Routes = [
     path: 'cuentas-corrientes',
     component: SecondaryLayout,
     children: [
-      { path:'', loadComponent: () => import ('./features/pagina1/pagina1').then(m => m.Pagina1)}
+      { path: '', loadComponent: () => import('./features/pagina1/pagina1').then(m => m.Pagina1) }
     ]
+  },
+  {
+    path: '**',
+    component: NotFOund,
+    title: 'Not Found'
   }
 ];

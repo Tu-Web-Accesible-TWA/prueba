@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Breadcrumbs } from '../../../../shared/ui/breadcrumbs/breadcrumbs';
 
 @Component({
-  selector: 'app-prestamo',
+  selector: 'app-tarjeta',
   imports: [Breadcrumbs],
-  templateUrl: './prestamo.html',
-  styleUrl: './prestamo.css',
+  templateUrl: './tarjeta.html',
+  styleUrl: './tarjeta.css',
 })
-export class Prestamo {}
+export class Tarjeta {}

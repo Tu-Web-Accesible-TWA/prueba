@@ -22,22 +22,24 @@ export class BreadcrumbService {
     { initialValue: [] as Breadcrumb[] }
   );
 
-  private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
-    const children = route.children;
-    if (children.length === 0) return breadcrumbs;
+  private createBreadcrumbs(route: ActivatedRoute | null, url = '', breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
+    if (!route) return breadcrumbs;
 
-    for (const child of children) {
-      const routeURL = child.snapshot.url.map(segment => segment.path).join('/');
-      let nextUrl = url;
-      if (routeURL !== '') nextUrl += `/${routeURL}`;
+    const routePath = route.snapshot.url.map(segment => segment.path).join('/');
+    const nextUrl = routePath ? `${url}/${routePath}` : url;
+    const label = route.snapshot.data['breadcrumb'];
 
-      const label = child.snapshot.data['breadcrumb'];
-      if (label) {
-        breadcrumbs.push({ label, url: nextUrl });
+    if (label) {
+      const isDuplicate = breadcrumbs.length > 0 && breadcrumbs[breadcrumbs.length - 1].url === (nextUrl || '/');
+      
+      if (!isDuplicate) {
+        breadcrumbs.push({
+          label,
+          url: nextUrl || '/'
+        });
       }
-
-      return this.createBreadcrumbs(child, nextUrl, breadcrumbs);
     }
-    return breadcrumbs;
+
+    return this.createBreadcrumbs(route.firstChild, nextUrl, breadcrumbs);
   }
 }
