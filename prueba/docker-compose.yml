@@ -5,7 +5,6 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    # No exponemos puertos al exterior aquí para que solo Caddy hable con él
     expose:
       - "8080"
 
@@ -15,7 +14,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"     # HTTP
-      - "443:443"   # HTTPS (por si activas SSL local)
+      - "443:443"   # HTTPS
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data

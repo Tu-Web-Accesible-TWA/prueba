@@ -19,7 +19,7 @@
   opacity: 0;
   visibility: hidden; /* Mejor que display:none para a11y */
   transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 /* Cuando la Signal isVisible() sea true, se añade esta clase */

@@ -58,3 +58,13 @@
   cursor: pointer;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 1024px) {
+  .u-container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 64px 24px;
+  }
+}
