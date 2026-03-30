@@ -6,20 +6,22 @@
           <i class="fa-solid fa-chevron-left"></i> Volver
         </button>
       }
-      <button class="close-btn" (click)="handleClose()">✕</button>
+      <button class="close-btn" (click)="handleClose()" aria-label="Cerrar Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
 
     <ul class="menu-list">
       @for (item of items(); track $index) {
         <li class="menu-item">
           @if (item.items && item.items.length > 0) {
-            <div class="item-wrapper" (click)="toggleChild($index)">
+            <button class="item-wrapper" (click)="toggleChild($index)">
               <div class="label-group">
                 @if (item.iconClass) { <i [class]="item.iconClass"></i> }
                 <span>{{ item.label }}</span>
               </div>
-              <span class="arrow">›</span>
-            </div>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
 
             <app-sub-menu-mobile 
               [items]="item.items"

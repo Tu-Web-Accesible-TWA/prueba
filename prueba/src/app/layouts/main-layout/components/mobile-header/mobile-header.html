@@ -16,7 +16,7 @@
             </svg>
         </a>
         <button class="para-ti" (click)="toggleParaTi()">
-            Para ti <i class="fa-solid fa-chevron-down icon-arrow"></i>
+            Para ti <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <app-sub-menu-mobile [items]="paraTiData()" [isVisible]="isParaTiOpen()" [isRoot]="true"
@@ -25,10 +25,8 @@
     </div>
 
     <div class="header-bottom">
-        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir Menú">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <button class="menu-mobile" (click)="toggleMenu()" aria-label="Abrir Menú">
+            <i class="fa-solid fa-bars"></i>
         </button>
 
         <app-sub-menu-mobile [items]="menuData()" [isVisible]="isMenuOpen()" [isRoot]="true"
@@ -36,9 +34,15 @@
         </app-sub-menu-mobile>
 
         <div class="header-icons">
-            <span class="icon atencionIcon"></span>
-            <span class="icon contactIcon"></span>
-            <span class="icon clientIcon"></span>
+            <a routerLink="/atencion-al-cliente-y-reclamaciones" aria-label="Ir a ...">
+                <span class="icon atencionIcon"></span>
+            </a>
+            <a href="https://www.zonacliente.cetelem.es/homebankingCetelem/contacta.htm" aria-label="Ir a ...">
+                <span class="icon contactIcon"></span>
+            </a>
+            <a href="https://www.zonacliente.cetelem.es/homebankingCetelem/login.htm" aria-label="Ir a ...">
+                <span class="icon clientIcon"></span>
+            </a>
         </div>
     </div>
 </header>

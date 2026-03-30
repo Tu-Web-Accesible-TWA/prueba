@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SubmenuData } from '../../../../../core/models/menu.model';
 
 @Component({
   selector: 'app-sub-menu',
@@ -10,19 +11,4 @@ import { RouterLink } from '@angular/router';
 export class SubMenu {
   data = input.required<SubmenuData>();
   isVisible = input.required<boolean>();
-}
-
-
-export interface SubmenuItem {
-  label: string;
-  url: string;
-  iconClass: string;
-}
-
-export interface SubmenuData {
-  title: string;
-  imageUrl: string;
-  items: SubmenuItem[];
-  buttonText: string;
-  buttonUrl: string;
 }

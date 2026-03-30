@@ -19,8 +19,8 @@ export class BottonHeader {
     buttonText: 'Conoce los préstamos Cetelem',
     buttonUrl: '/prestamos',
     items: [
-      { label: 'Coche', url: '/prestamos/prestamo-coche', iconClass: 'icon-car' },
-      { label: 'Reforma y hogar', url: '/prestamos/prestamo-reforma', iconClass: 'icon-home' }
+      { label: 'Coche', url: '/prestamos/prestamo-coche', iconClass: 'fa-solid fa-car' },
+      { label: 'Reforma y hogar', url: '/prestamos/prestamo-reforma', iconClass: 'fa-solid fa-house' }
     ]
   };
 
@@ -30,9 +30,9 @@ export class BottonHeader {
     buttonText: 'Conoce las cuentas Cetelem',
     buttonUrl: '/cuentas',
     items: [
-      { label: 'Cuenta Suma', url: '/cuentas/suma', iconClass: 'icon-wallet' },
-      { label: 'Cuenta Ahorro', url: '/cuentas/ahorro', iconClass: 'icon-pig' },
-      { label: 'Cuenta de Pago Básica', url: '/cuentas/pago-basic', iconClass: 'icon-heart' }
+      { label: 'Cuenta Suma', url: '/cuentas/suma', iconClass: 'fa-solid fa-wallet' },
+      { label: 'Cuenta Ahorro', url: '/cuentas/ahorro', iconClass: 'fa-solid fa-piggy-bank' },
+      { label: 'Cuenta de Pago Básica', url: '/cuentas/pago-basic', iconClass: 'fa-solid fa-heart' }
     ]
   };
 
@@ -42,9 +42,9 @@ export class BottonHeader {
     buttonText: 'Conoce los seguros de Cetelem',
     buttonUrl: '/seguros',
     items: [
-      { label: 'Enfermedades Graves', url: '/seguros/enf', iconClass: 'icon-hospital' },
-      { label: 'Ciberseguro Tarjetas', url: '/seguros/ciber', iconClass: 'icon-screen' },
-      { label: 'Senior', url: '/seguros/senior', iconClass: 'icon-cane' }
+      { label: 'Enfermedades Graves', url: '/seguros/enf', iconClass: 'fa-regular fa-hospital' },
+      { label: 'Ciberseguro Tarjetas', url: '/seguros/ciber', iconClass: 'fa-solid fa-display' },
+      { label: 'Senior', url: '/seguros/senior', iconClass: 'fa-solid fa-person-cane' }
     ]
   };
 

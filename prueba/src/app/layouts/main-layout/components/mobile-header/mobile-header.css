@@ -25,19 +25,14 @@
 }
 
 /* Hamburguesa */
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.menu-mobile {
   background: none;
   border: none;
-  cursor: pointer;
 }
 
-.bar {
-  width: 25px;
-  height: 2px;
-  background-color: #ccc;
+.menu-mobile i {
+  color: gray; 
+  font-size: 1.5rem;
 }
 
 .para-ti{
@@ -45,13 +40,14 @@
     left: 149px;
     top: 18px;
     background-color: transparent;
+    color: #4b4f54;
     border: none;
     font-weight: bold;
     font-size: 1rem;
 }
 
-.icon-arrow {
-  font-size: 1rem;
+.para-ti i {
+  font-size: 10px;
   color: #337F37;
 }
 

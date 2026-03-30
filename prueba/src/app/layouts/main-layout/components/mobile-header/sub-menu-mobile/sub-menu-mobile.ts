@@ -1,5 +1,6 @@
 import { Component, input, output, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MenuMobileItem } from '../../../../../core/models/menu.model';
 
 @Component({
   selector: 'app-sub-menu-mobile',
@@ -9,7 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './sub-menu-mobile.css',
 })
 export class SubMenuMobile {
-  items = input.required<MenuItem[]>();
+  items = input.required<MenuMobileItem[]>();
   isVisible = input<boolean>(false);
   isRoot = input<boolean>(false); // Para saber si mostrar el botón X o Volver
 
@@ -28,11 +29,4 @@ export class SubMenuMobile {
     this.activeChildIndex.set(null);
     this.closeMenu.emit();
   }
-}
-
-export interface MenuItem {
-  label: string;
-  url?: string;
-  iconClass?: string;
-  items?: MenuItem[]; // Estructura recursiva
 }

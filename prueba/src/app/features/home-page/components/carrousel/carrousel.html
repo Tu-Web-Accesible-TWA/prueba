@@ -1,24 +1,21 @@
 <section class="swiper-viewport">
-    <swiper-container #swiper pagination="true" navigation="true" loop="false" class="mySwiper" init="true"
-        autoplay="true">
-        <swiper-slide>
+  <swiper-container #swiper 
+    init="true"
+    navigation="true" 
+    pagination="true" 
+    pagination-clickable="true"
+    autoplay-delay="3000"
+    autoplay-disable-on-interaction="false"
+    class="cetelem-swiper">
+    
+    <swiper-slide><app-slide-depositos /></swiper-slide>
+    <swiper-slide><app-slide-depositos-1 /></swiper-slide>
+    <swiper-slide><app-slide-depositos-1 /></swiper-slide>
+  </swiper-container>
 
-            <app-slide-depositos />
-
-        </swiper-slide>
-
-        <swiper-slide>
-            <app-slide-depositos-1 />
-        </swiper-slide>
-
-        <swiper-slide>
-            <app-slide-depositos-1 />
-        </swiper-slide>
-
-        
-    </swiper-container>
-
-    <button (click)="toggleAutoplay()" class="control-btn">
-            {{ isPlaying() ? '⏸ Pausar' : '▶️ Iniciar' }}
-        </button>
+  <div class="swiper-controls">
+    <button (click)="toggleAutoplay()" class="autoplay-toggle">
+      <i [class]="isPlaying() ? 'fa-solid fa-pause' : 'fa-solid fa-play'"></i>
+    </button>
+    </div>
 </section>
