@@ -79,7 +79,7 @@
 }
 
 .slide-loan .btn-primary:hover {
-  background-color: #2d7031;
+  background-color: var(--color-verde-cetelem);
   transform: scale(1.02);
 }
 

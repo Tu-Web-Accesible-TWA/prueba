@@ -1,12 +1,5 @@
 <section class="swiper-viewport">
-  <swiper-container #swiper 
-    init="true"
-    navigation="true" 
-    pagination="true" 
-    pagination-clickable="true"
-    autoplay-delay="3000"
-    autoplay-disable-on-interaction="false"
-    class="cetelem-swiper">
+  <swiper-container #swiper init="false">
     
     <swiper-slide><app-slide-depositos /></swiper-slide>
     <swiper-slide><app-slide-depositos-1 /></swiper-slide>
@@ -14,8 +7,10 @@
   </swiper-container>
 
   <div class="swiper-controls">
-    <button (click)="toggleAutoplay()" class="autoplay-toggle">
+    <button (click)="toggleAutoplay()" class="autoplay-toggle" role="group" aria-label="Control de reproducción y pausa de promociones" tabindex="0">
       <i [class]="isPlaying() ? 'fa-solid fa-pause' : 'fa-solid fa-play'"></i>
     </button>
-    </div>
+    
+    <div #pagination class="swiper-pagination" role="group" aria-label="Control de promociones"></div>
+  </div>
 </section>

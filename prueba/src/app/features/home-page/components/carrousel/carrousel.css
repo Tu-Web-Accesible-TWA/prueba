@@ -7,7 +7,6 @@ swiper-container::part(button-next) {
   border-radius: 50%;
   color: #3A913F;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  /* Reducimos el tamaño del icono interno */
   border: 1px solid #f0f0f0;
 }
 
@@ -15,21 +14,19 @@ swiper-container::part(button-next) {
 swiper-container::part(button-prev) { left: 10px; }
 swiper-container::part(button-next) { right: 10px; }
 
-/* --- Contenedor de Paginación --- */
-/* Lo posicionamos fuera del swiper-container para alinearlo con el botón */
-
-
 /* --- Estilo de los Puntos (Bullets) --- */
-swiper-container::part(bullet) {
-  width: 12px;
-  height: 12px;
+::ng-deep .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
   bottom:  -10px;
   background: transparent;
+  border-radius: 50%;
   border: 2px solid #3A913F;
   opacity: 1;
+  cursor: pointer;
 }
 
-swiper-container::part(bullet-active) {
+::ng-deep .swiper-pagination-bullet-active {
   background: #3A913F;
   width: 16px;
   height: 16px;
@@ -46,10 +43,18 @@ swiper-container::part(bullet-active) {
     padding: 4px 16px 4px 4px;
     position: absolute;
     left: calc(50% - 70px);
-    width: 140px;
+    width: fit-content;
     height: 44px;
     margin: 0 auto;
     z-index: 10;
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    bottom: auto;
 }
 
 .autoplay-toggle {

@@ -63,7 +63,7 @@
 .slide-ahorro .check-icon {
   width: 20px;
   height: 20px;
-  background-color: #3A913F;
+  background-color: var(--color-verde-cetelem);
   border-radius: 50%;
   margin-right: 12px;
   position: relative;
