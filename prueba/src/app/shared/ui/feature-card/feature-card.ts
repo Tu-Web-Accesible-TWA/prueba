@@ -1,12 +1,12 @@
 import { Component, input, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-card1',
+  selector: 'app-feature-card',
   imports: [],
-  templateUrl: './card1.html',
-  styleUrl: './card1.css',
+  templateUrl: './feature-card.html',
+  styleUrl: './feature-card.css',
 })
-export class Card1 {
+export class FeatureCard {
   //@Input({ required: true }) title!: string;
   readonly title = input.required<string>();
   readonly description = input.required<string>();  

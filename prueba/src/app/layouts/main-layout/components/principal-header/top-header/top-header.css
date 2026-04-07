@@ -1,6 +1,5 @@
 /* 1. Contenedor principal: Alineación horizontal */
 .heading {
-  
     background-color: #fff;
     display: table;
     float: none;
@@ -10,7 +9,6 @@
     padding-bottom: 0;
     padding-top: 0;
     width: 100%;
-
 }
 
 .dvLogo {
@@ -36,20 +34,16 @@
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 24px; /* Espacio entre los enlaces */
 }
 
 .navB2B a {
   text-decoration: none;
   color: #555555; /* Color gris oscuro nativo */
-  font-weight: 700;
+  font-weight: bold;
   font-size: 13px;
   text-transform: uppercase;
-  padding: 8px 0;
-  position: relative;
-  transition: color 0.3s ease;
+  padding-bottom: 5px;
 }
 
 .navB2B a:hover {
@@ -59,18 +53,11 @@
 /* Estado activo ("PARA TI") */
 .navB2B a.active {
   color: var(--color-verde-cetelem);
+  border-bottom: 3px solid var(--color-verde-cetelem) !important;
 }
 
 /* Línea verde inferior para el elemento activo */
-.navB2B a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; /* Ajusta la distancia de la línea al texto */
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-verde-cetelem);
-}
+
 
 /* Línea separadora gris entre "Para ti" y "Comercios" */
 .navB2B li:first-child {

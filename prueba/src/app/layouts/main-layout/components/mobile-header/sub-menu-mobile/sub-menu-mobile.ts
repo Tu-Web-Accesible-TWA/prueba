@@ -1,6 +1,6 @@
 import { Component, input, output, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MenuMobileItem } from '../../../../../core/models/menu.model';
+import { MenuMobileItem } from '../../../../../core/models/menu-mobile.model';
 
 @Component({
   selector: 'app-sub-menu-mobile',

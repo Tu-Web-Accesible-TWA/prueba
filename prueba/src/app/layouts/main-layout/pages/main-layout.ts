@@ -3,7 +3,7 @@ import { PrincipalHeader } from '../components/principal-header/principal-header
 import { RouterOutlet } from '@angular/router';
 import { PrincipalFooter } from '../components/principal-footer/principal-footer';
 import { Responsive } from '../../../core/services/responsive/responsive';
-import { MobileHeader } from '../components/mobile-header/mobile-header';
+import { MobileHeader } from '../components/mobile-header/page/mobile-header';
 
 @Component({
   selector: 'app-main-layout',

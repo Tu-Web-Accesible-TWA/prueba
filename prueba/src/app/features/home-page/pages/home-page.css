@@ -31,29 +31,6 @@
   padding: 0;
 }
 
-.btn-primary {
-  color: #FFF;
-  background-color: var(--color-verde-cetelem);
-  margin-top: 40px;
-  text-decoration: none;
-}
-
-.btn {
-  display: inline-block;
-  height: 56px;
-  line-height: 56px;
-  padding: 0 24px;
-  text-align: center;
-  border-radius: 56px;
-  border: 0;
-  font-weight: 700;
-  font-size: 16px;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  min-width: 200px;
-}
-
 .features-grid {
   margin-top: 10px;
   display: grid;
@@ -63,6 +40,12 @@
   column-gap: 120px;
   row-gap: 64px;
   width: 50%;
+}
+
+.b-about-cetelem-image{
+  margin: 0 0 80px;
+  border-radius: 8px;
+  width: 1120px;
 }
 
 @media (max-width: 1024px) {

@@ -1,14 +1,14 @@
-.u-container-box {
+.u-container-box{
   display: flex;
   flex-direction: row;
+  padding: 80px;
   justify-content: space-between;
-  align-items: stretch;
-  padding: 64px 24px;
 }
 
 .u-container-box>a {
   display: block;
   text-decoration: none;
+  align-self: center;
 }
 
 .u-box {
@@ -60,11 +60,8 @@
 }
 
 @media (max-width: 1024px) {
-  .u-container-box {
-    display: flex;
+  .u-container-box{
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 64px 24px;
+    padding: 56px 24px;
   }
 }

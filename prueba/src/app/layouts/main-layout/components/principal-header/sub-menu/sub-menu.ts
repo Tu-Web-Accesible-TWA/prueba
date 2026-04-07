@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SubmenuData } from '../../../../../core/models/menu.model';
+import { SubMenuData } from '../../../../../core/models/menu.model';
+
 
 @Component({
   selector: 'app-sub-menu',
@@ -9,6 +10,6 @@ import { SubmenuData } from '../../../../../core/models/menu.model';
   styleUrl: './sub-menu.css',
 })
 export class SubMenu {
-  data = input.required<SubmenuData>();
+  data = input.required<SubMenuData>();
   isVisible = input.required<boolean>();
 }

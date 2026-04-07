@@ -1,16 +1,19 @@
 import { Injectable, signal } from '@angular/core';
-import { MenuMobileItem } from '../../models/menu.model';
-import { MAIN_MENU_DATA_MOBILE, PARA_TI_DATA_MOBILE } from '../../data/menu.data';
+import { SubMenuData } from '../../models/menu.model';
+import { CUENTAS_SUBMENU, MIS_SOLICITUDES_SUBMENU, PRESTAMOS_SUBMENU, SEGUROS_SUBMENU } from '../../data/menu.data';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class MenuService {
-  // Usamos signals para que el estado sea reactivo en toda la app
-  private _paraTiDataMobile = signal<MenuMobileItem[]>(PARA_TI_DATA_MOBILE);
-  private _mainMenuDataMobile = signal<MenuMobileItem[]>(MAIN_MENU_DATA_MOBILE);
+  private _prestamoSubMenu = signal<SubMenuData>(PRESTAMOS_SUBMENU);
+  private _cuentaSubMenu = signal<SubMenuData>(CUENTAS_SUBMENU);
+  private _seguroSubMenu = signal<SubMenuData>(SEGUROS_SUBMENU);
+  private _misSolicitudesSubMenu = signal<SubMenuData>(MIS_SOLICITUDES_SUBMENU);
 
-  // Exponemos como Readonly para que los componentes no lo modifiquen accidentalmente
-  paraTiDataMobile = this._paraTiDataMobile.asReadonly();
-  mainMenuDataMobile = this._mainMenuDataMobile.asReadonly();
+  prestamoSubMenu = this._prestamoSubMenu.asReadonly();
+  cuentaSubMenu = this._cuentaSubMenu.asReadonly();
+  seguroSubMenu = this._seguroSubMenu.asReadonly();
+  misSolicitudesSubMenu = this._misSolicitudesSubMenu.asReadonly();
 }

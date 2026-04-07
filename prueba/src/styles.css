@@ -1,8 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- Imports --- */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
-:root{
+/* --- Variables Globales --- */
+
+:root {
     --color-verde-cetelem: #337F37;
+    --color-texto: #4b4f54;
+    --font-main: "Ubuntu", sans-serif;
+    --border-radius: 8px;
+    --green-cetelem: #3A913F;
+    --green-dark: #235726;
+    --black: #111;
+    --dark-gray: #4B4F54;
+    --light-gray: #C1C6C8;
+    --lighter-gray: #E8E8E8;
+}
+
+/* --- Reset y Configuración Base --- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html,
@@ -11,12 +30,23 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0 40px;
 }
 
+body {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-texto);
+    font-display: swap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Ajuste de padding para móviles */
+
 @media (max-width: 1024px) {
+
     html,
     body {
         height: 100%;
@@ -29,20 +59,10 @@ body {
     }
 }
 
-body {
-    font-family: "Ubuntu", Arial, sans-serif;
-    font-weight: 400;
-    font-display: swap;
-    color: #4b4f54;
-    font-size: 16px;
-    line-height: 24px;
-}
+/* --- Componentes Globales para toda la web --- */
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
+
+/* --- Clases de Utilidad --- */
 
 .sr-only {
     position: absolute;
@@ -54,4 +74,9 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
 }

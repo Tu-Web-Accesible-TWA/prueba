@@ -1,20 +1,13 @@
-export interface SubmenuData {
-  title: string;
-  imageUrl: string;
-  items: SubmenuItem[];
-  buttonText: string;
-  buttonUrl: string;
-}
-
-export interface SubmenuItem {
+export interface SubMenuItem {
   label: string;
   url: string;
   iconClass: string;
 }
 
-export interface MenuMobileItem {
-  label: string;
-  url?: string;
-  iconClass?: string;
-  items?: MenuMobileItem[]; // Estructura recursiva
+export interface SubMenuData {
+  title: string;
+  imageUrl: string;
+  items: SubMenuItem[];
+  buttonText: string;
+  buttonUrl: string;
 }

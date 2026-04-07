@@ -1,10 +1,31 @@
-.content {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1280px;
-  min-height: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+.container-fluid-1280{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --border-radius: 8px;
+    --font-family: "Ubuntu", sans-serif;
+    --green-cetelem: #3A913F;
+    --green-dark: #235726;
+    --black: #111;
+    --dark-gray: #4B4F54;
+    --light-gray: #C1C6C8;
+    --lighter-gray: #E8E8E8;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-weight: 400;
+    color: #4b4f54;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    background-color: #fff;
+    padding: 0;
 }
 
 @media (max-width: 1024px) {

@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { SubMenuMobile } from './sub-menu-mobile/sub-menu-mobile';
-import { MenuService } from '../../../../core/services/menu/menu';
+import { SubMenuMobile } from '../sub-menu-mobile/sub-menu-mobile';
 import { RouterLink } from '@angular/router';
+import { MenuMobileService } from '../../../../../core/services/menu-mobile/menu-mobile';
 
 @Component({
   selector: 'app-mobile-header',
@@ -10,13 +10,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './mobile-header.css',
 })
 export class MobileHeader {
-  private menuService = inject(MenuService);
+  private menuMobileService = inject(MenuMobileService);
 
   isMenuOpen = signal(false);
   isParaTiOpen = signal(false);
 
-  paraTiData = this.menuService.paraTiDataMobile;
-  menuData = this.menuService.mainMenuDataMobile;
+  paraTiData = this.menuMobileService.paraTiDataMobile;
+  menuData = this.menuMobileService.mainMenuDataMobile;
 
   toggleMenu() {
     this.isMenuOpen.update(state => !state);

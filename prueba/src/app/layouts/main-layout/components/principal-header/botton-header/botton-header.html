@@ -13,7 +13,7 @@
                         Préstamos
                     </a>
                     
-                    <app-sub-menu [data]="dataPrestamos" [isVisible]="menuActivo() === 'prestamos'"></app-sub-menu>
+                    <app-sub-menu [data]="dataPrestamos()" [isVisible]="menuActivo() === 'prestamos'"></app-sub-menu>
                     
                 </li>
                 <li class="mega-dropdown" id="layout_14" role="presentation">
@@ -31,7 +31,7 @@
                         <span>Cuentas</span>
                     </a>
                     
-                    <app-sub-menu [data]="dataCuentas" [isVisible]="menuActivo() === 'cuentas'"></app-sub-menu>
+                    <app-sub-menu [data]="dataCuentas()" [isVisible]="menuActivo() === 'cuentas'"></app-sub-menu>
 
                 </li>
                 <li class="mega-dropdown" id="layout_520" role="presentation">
@@ -49,11 +49,14 @@
                         <span>Seguros</span>
                     </a>
 
-                    <app-sub-menu [data]="dataSeguros" [isVisible]="menuActivo() === 'seguros'"></app-sub-menu>
+                    <app-sub-menu [data]="dataSeguros()" [isVisible]="menuActivo() === 'seguros'"></app-sub-menu>
                 </li>
-                <li class="mega-dropdown" id="layout_34" role="presentation">
+                <li class="mega-dropdown" id="layout_34" role="presentation"
+                    (mouseenter)="abrirMenu('solicitudes')" (mouseleave)="cerrarMenu()" (focusin)="abrirMenu('solicitudes')"
+                    (focusout)="cerrarMenu()" (keydown.escape)="cerrarMenu()">
                     <a class="dropdown-toggle" aria-labelledby="layout_34" href="/mis-solicitudes"
-                        role="menuitem" aria-label="Ir a la sección Mis Solicitudes">
+                        role="menuitem" aria-label="Ir a la sección Mis Solicitudes" [attr.aria-expanded]="menuActivo() === 'solicitudes'"
+                        aria-haspopup="menu">
                         <span>Mis Solicitudes</span>
                     </a>
                 </li>
@@ -62,6 +65,8 @@
                         role="menuitem" aria-label="Ir a la sección Blog">
                         <span>Blog</span>
                     </a>
+
+                    <app-sub-menu [data]="dataMisSolicitudes()" [isVisible]="menuActivo() === 'solicitudes'"></app-sub-menu>
                 </li>
 
                 <!-- Enlaces Contacto y espacio cliente -->
