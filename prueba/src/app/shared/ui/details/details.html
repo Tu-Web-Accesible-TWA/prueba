@@ -1,4 +1,12 @@
-<ng-content select="summary"></ng-content>
+<summary>
+  <span class="summary-title">{{ title() }}</span>
+  <span class="icon-wrapper">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path d="M15.165-9H9.415v-5.718a5.4,5.4,0,0,0-2.287,0V-9H1.411a5.4,5.4,0,0,0,0,2.287H7.128v5.75a5.4,5.4,0,0,0,2.287,0v-5.75h5.75A5.4,5.4,0,0,0,15.165-9Z" 
+            transform="translate(-1.288 14.84)" 
+            fill="currentColor"></path> </svg>
+  </span>
+</summary>
 
 <div class="details-content">
   <ng-content></ng-content>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 
 @Component({
@@ -10,5 +10,5 @@ import { Component } from '@angular/core';
 })
 
 export class Details {
-
+  readonly title = input.required<string>();
 }

@@ -5,23 +5,30 @@
   padding: 80px;
 }
 
+.b-section {
+  padding: 80px;
+}
+
+.b-about-cetelem-image{
+  margin: 0 0 80px;
+  border-radius: 8px;
+  width: 1120px;
+  vertical-align: middle;
+  align-self: center;
+}
 
 .features-headlines {
   margin: 0 80px 0 0;
   max-width: 400px;
 }
 
-.creativity{
-  margin: 0 40px 0 0;
-}
-
-.texts, .creativity{
-    max-width: 480px;
-}
-
-.b-block{
-  display: flex;
-  justify-content: space-between;
+.pretitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0 0 8px;
+    padding: 0;
+    color: #111;
+    font-weight: 400;
 }
 
 .title {
@@ -41,14 +48,6 @@
   column-gap: 120px;
   row-gap: 64px;
   width: 50%;
-}
-
-.b-about-cetelem-image{
-  margin: 0 0 80px;
-  border-radius: 8px;
-  width: 1120px;
-  vertical-align: middle;
-  align-self: center;
 }
 
 @media (max-width: 1024px) {

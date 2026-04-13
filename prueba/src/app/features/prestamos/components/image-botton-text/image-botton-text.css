@@ -1,0 +1,65 @@
+/* 1. Contenedor de bloque sólido */
+.cetelem-layout {
+  width: 100%;
+  padding: 60px 0;
+  display: block;
+}
+
+.layout-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  
+  /* Definimos 3 columnas: 
+     - Col 1: Solo imagen (~60%)
+     - Col 2: Zona de solape (~15%)
+     - Col 3: Solo texto (~25%) */
+  grid-template-columns: 60% 15% 25%;
+  
+  /* Definimos 3 filas:
+     - Fila 1: Parte de arriba de la imagen
+     - Fila 2: El área donde se cruzan (solape vertical)
+     - Fila 3: Lo que cuelga la tarjeta por debajo */
+  grid-template-rows: auto 150px 150px;
+}
+
+/* 2. Posicionamiento de la imagen */
+.image-area {
+  grid-column: 1 / 3; /* Ocupa col 1 y col 2 (el solape) */
+  grid-row: 1 / 3;    /* Ocupa fila 1 y fila 2 (el solape) */
+  z-index: 1;
+}
+
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para que la imagen no se deforme */
+  display: block;
+  border-radius: 4px;
+}
+
+/* 3. Posicionamiento de la tarjeta blanca */
+.card-area {
+  grid-column: 2 / 4; /* Empieza en col 2 (solape) y termina al final */
+  grid-row: 2 / 4;    /* Empieza en fila 2 (solape) y termina al final */
+  
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 6px;
+  z-index: 2; /* Por encima de la imagen */
+  display: flex;
+  align-items: center;
+}
+
+/* 4. Móvil: Se apilan automáticamente */
+@media (max-width: 992px) {
+  .layout-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .card-area {
+    margin-top: -40px; /* Un pequeño solape hacia arriba en móvil queda mejor */
+  }
+}

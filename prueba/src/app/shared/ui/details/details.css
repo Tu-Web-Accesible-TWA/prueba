@@ -1,55 +1,72 @@
-/* Estilos para el contenedor principal (<details>) */
 :host {
   display: block;
-  border-bottom: 1px solid #e0e0e0; /* La línea gris sutil inferior */
-  padding: 16px 0;
   width: 100%;
 }
 
-/* Estilos para el título (<summary>) */
-::ng-deep summary {
+summary {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  /* Un poco más de aire suele mejorar la legibilidad */
+  border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #000;
-  list-style: none; /* Oculta la flecha nativa en Firefox/Chrome */
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
-/* Oculta la flecha nativa en Safari */
-::ng-deep summary::-webkit-details-marker {
+/* Ocultar flecha nativa */
+summary::-webkit-details-marker {
   display: none;
 }
 
-/* Dibuja el "+" cuando está cerrado */
-::ng-deep summary::after {
-  content: '+';
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1;
-  margin-left: 16px;
+.summary-title {
+  flex: 1;
+  padding-right: 16px;
   color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  /* Limpiado el duplicado */
+  line-height: 1.2;
+  user-select: none;
+  /* Evita que se seleccione el texto al hacer doble clic rápido */
 }
 
-/* Cambia el "+" por una "x" cuando el <details> está abierto */
-:host([open]) ::ng-deep summary::after {
-  content: '×'; /* Símbolo de multiplicación que parece una X perfecta */
-  font-size: 1.8rem;
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  /* Evita que el icono se aplaste si el título es muy largo */
 }
 
-/* Estilos para el texto de abajo (la lista, los párrafos, etc.) */
+summary svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transición más fluida */
+  color: #111;
+}
+
+/* Estado Abierto */
+:host([open]) summary svg {
+  transform: rotate(45deg);
+  /* 45deg convierte el + en un x perfecto */
+}
+
 .details-content {
-  padding-top: 16px;
-  color: #555; /* Un gris un poco más suave que el título */
+  padding: 16px 0 24px;
+  color: #555;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 500px;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-out, border 0ms 400ms linear;
 }
 
-/* Quitar el margen superior del primer elemento proyectado para que quede alineado */
-::ng-deep .details-content > *:first-child {
+/* Estilo para contenido proyectado */
+.details-content ::ng-content>*:first-child {
   margin-top: 0;
+  transition: all 0.25s ease-out;
 }

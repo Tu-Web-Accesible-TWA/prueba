@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-feature-card',
@@ -7,11 +7,9 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './feature-card.css',
 })
 export class FeatureCard {
-  //@Input({ required: true }) title!: string;
   readonly title = input.required<string>();
   readonly description = input.required<string>();  
-  
   // Propiedades opcionales para el enlace
-  @Input() linkText?: string;
-  @Input() linkUrl?: string;
+  readonly linkText = input<string>();
+  readonly linkUrl = input<string>();
 }
