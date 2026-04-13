@@ -1,0 +1,102 @@
+/* loan-hero.component.css */
+.loan-hero {
+  background-color: #f0f7f0; /* Fondo verde muy claro */
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1120px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 40px;
+  align-items: center;
+}
+
+/* Lado izquierdo: Información */
+.info-side h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 64px;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.quota-box {
+  border-top: 2px solid #3a913f;
+  border-bottom: 2px solid #3a913f;
+  max-width: 240px;
+  padding: 8px 0;
+  margin: 56px 0 16px;
+}
+
+.month-amount p {
+    color: #4b4f54 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.amount {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #111;
+}
+
+.amount span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #111;
+}
+
+.legal-text {
+  margin-top: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #747474;
+  max-width: 240px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #2e7d32;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Lado derecho: Imagen y Tarjeta */
+.image-side {
+  position: relative; /* Necesario para que el hijo absoluto se posicione aquí */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  /* Efecto de tinte verde (opcional) */
+  opacity: 0.3;
+}
+
+.image-container{
+  background-color: #88bc8b;
+  border-radius: 8px;
+}

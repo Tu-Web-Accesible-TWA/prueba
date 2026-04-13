@@ -1,4 +1,6 @@
 <div class="txt">
   <h2>{{title()}}</h2>
-  <p>{{text()}}</p>
+  @for(item of text(); track $index){
+    <p>{{item}}</p>
+  }
 </div>

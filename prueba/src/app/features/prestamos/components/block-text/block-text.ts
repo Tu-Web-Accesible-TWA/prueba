@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class BlockText {
   readonly title = input.required<string>();
-  readonly text = input.required<string>();
+  readonly text = input.required<string[]>();
 }
