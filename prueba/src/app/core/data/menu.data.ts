@@ -4,7 +4,7 @@ import { SubMenuItem } from "../models/menu.model";
 //Items
 const PRESTAMOS_ITEMS: SubMenuItem[] = [
   { label: 'Coche', url: '/prestamos/prestamo-coche', iconClass: 'fa-solid fa-car' },
-  { label: 'Reforma y hogar', url: '/prestamos/reforma', iconClass: 'fa-solid fa-house' }
+  { label: 'Reforma y hogar', url: '/prestamos/prestamo-reforma', iconClass: 'fa-solid fa-house' }
 ];
 
 const CUENTAS_ITEMS: SubMenuItem[] = [

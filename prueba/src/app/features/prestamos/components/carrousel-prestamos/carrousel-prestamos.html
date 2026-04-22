@@ -1,0 +1,14 @@
+<section class="swiper-viewport">
+    <div class="swiper-wrapper-relative">
+        <swiper-container #swiper init="false">
+            @for(item of data(); track $index){
+            <swiper-slide>
+                <app-slide-prestamos [data]="item">
+                </app-slide-prestamos>
+            </swiper-slide>
+            }
+        </swiper-container>
+
+        <div #pagination class="custom-pagination"></div>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+<section class="loan-hero">
+  <div class="container">
+    <div class="info-side">
+      <h1>{{ data().title }}</h1>
+      <p class="subtitle">{{ data().subtitle }}</p>
+      
+      <div class="quota-box">
+        <p>Cuota</p>
+        <p class="amount">{{ data().monthlyQuota }} <span>€/mes</span></p>
+      </div>
+
+      <p class="legal-text">{{ data().legalText }}</p>
+
+      <button class="btn-primary">Me interesa</button>
+    </div>
+
+    <div class="image-side">
+      <div class="image-container">
+        <img [src]="data().imgUrl" alt=""> 
+        <app-loan-feature-card 
+          [maxAmount]="data().maxAmount"
+          [tinRange]="data().tinRange"
+          [taeRange]="data().taeRange"
+        />
+      </div>
+    </div>
+  </div>
+</section>

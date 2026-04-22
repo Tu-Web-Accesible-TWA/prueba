@@ -1,0 +1,50 @@
+.slide-container {
+  display: grid;
+  grid-template-columns: 50% 50%; /* Ajusta el % según la imagen */
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.image-side {
+  width: 100%;
+  height: 100%;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content-side {
+  display: flex;
+  flex-direction: column;
+  margin-top: 57px;
+  padding: 0 60px; /* Espacio lateral para el texto */
+  background-color: #fff;
+}
+
+.slide-title {
+  
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.slide-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsivo: En móviles se apilan */
+@media (max-width: 992px) {
+  .slide-container {
+    grid-template-columns: 1fr;
+  }
+  .content-side {
+    padding: 40px 20px;
+  }
+}

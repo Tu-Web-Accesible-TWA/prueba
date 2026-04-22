@@ -1,0 +1,35 @@
+.swiper-viewport {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper-relative {
+  position: relative;
+}
+
+/* Posicionamos los puntos exactamente sobre la zona de texto */
+.custom-pagination {
+  position: absolute;
+  bottom: 80px; /* Ajusta según la altura de tu slide */
+  left: 50%;    /* Alineado con el inicio de la columna de texto (content-side) */
+  padding-left: 60px; /* Coincide con el padding del texto */
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo de los puntos (Verde Cetelem) */
+::ng-deep .swiper-pagination-bullet {
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid #3a913f; /* Verde */
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+::ng-deep .swiper-pagination-bullet-active {
+  background: #337F37; /* Punto relleno */
+}
