@@ -1,7 +1,8 @@
 <app-breadcrumbs></app-breadcrumbs>
 
-<div class="text-section">
+
     @for (item of data(); track $index) {
-  <p class="paragraph">{{ item.paragraph }}</p>
+ <div class="text-section"><p class="paragraph">{{ item.paragraph }}</p></div>
 }
-</div>
+
+<app-list></app-list>

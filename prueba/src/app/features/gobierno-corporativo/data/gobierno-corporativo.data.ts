@@ -10,3 +10,4 @@ export const GOBIERNO_CORPORATIVO_DATA = [
         paragraph: 'Banco Cetelem, S.A.U. con CIF A-78650348 y domicilio social en 28005 de Madrid, Paseo de los Melancólicos, 14A, cuyo accionista único es BNP Paribas Personal Finance se encuentra inscrita en el Registro de Entidades del Banco de España con el número 0225 y en el Registro Mercantil de Madrid en la Hoja M- 66979, Tomo 4018, Folio 109. Cetelem es Asociado de ASNEF, inscrito con el número 510.',
     }
 ];
+
