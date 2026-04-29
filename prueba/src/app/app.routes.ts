@@ -22,6 +22,10 @@ export const routes: Routes = [
       {
         path: 'tarjetas',
         loadChildren: () => import('./features/tarjeta/tarjeta.routes').then(m => m.tarjetaRoutes)
+      },
+      {
+        path: 'gobierno-corporativo',
+        loadChildren: () => import('./features/gobierno-corporativo/gobierno-corporativo.routes').then(m => m.GobiernoCorporativoRoutes)
       }
     ]
   },
