@@ -1,0 +1,10 @@
+<section
+  class="description"
+  aria-label="Descripción del servicio para concesionarios"
+>
+  @for (item of paragraphs(); track $index) {
+    <p class="description-paragraph">
+      {{ item.text }}@if (item.bold) {<strong>{{ item.bold }}</strong>}
+    </p>
+  }
+</section>

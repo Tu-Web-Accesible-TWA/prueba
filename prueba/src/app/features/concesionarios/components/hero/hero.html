@@ -1,0 +1,125 @@
+<section class="hero" aria-labelledby="hero-title" lang="es">
+  <div class="hero-image-side">
+    <div
+      class="hero-image-placeholder"
+      role="img"
+      aria-label="Imagen ilustrativa de un profesional del sector concesionarios"
+    >
+      <!-- PLACEHOLDER imagen hero -->
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-category" id="hero-category">{{ data().category }}</p>
+      <h1 class="hero-title" id="hero-title">{{ data().title }}</h1>
+
+      <ul
+        class="hero-vehicles"
+        aria-label="Sectores en los que trabajamos"
+      >
+        <li class="vehicle-icon">
+          <span class="visually-hidden">Automoción</span>
+          <span class="icon-placeholder" aria-hidden="true">[coche]</span>
+          <!-- PLACEHOLDER icono coche -->
+        </li>
+        <li class="vehicle-icon">
+          <span class="visually-hidden">Moto</span>
+          <span class="icon-placeholder" aria-hidden="true">[moto]</span>
+          <!-- PLACEHOLDER icono moto -->
+        </li>
+        <li class="vehicle-icon">
+          <span class="visually-hidden">Náutica</span>
+          <span class="icon-placeholder" aria-hidden="true">[barco]</span>
+          <!-- PLACEHOLDER icono barco -->
+        </li>
+        <li class="vehicle-icon">
+          <span class="visually-hidden">Caravaning</span>
+          <span class="icon-placeholder" aria-hidden="true">[caravana]</span>
+          <!-- PLACEHOLDER icono caravana -->
+        </li>
+      </ul>
+
+      <a
+        [href]="data().ctaUrl"
+        class="hero-cta"
+        [attr.aria-label]="data().ctaText + ': información para concesionarios'"
+      >
+        {{ data().ctaText }}
+      </a>
+    </div>
+  </div>
+
+  <aside
+    class="hero-login"
+    aria-labelledby="login-title"
+  >
+    <div class="login-header">
+      <h2 class="login-title" id="login-title">{{ data().loginTitle }}</h2>
+      <div
+        class="login-logo-placeholder"
+        role="img"
+        aria-label="Logo Crédito Click"
+      >
+        <span class="icon-placeholder" aria-hidden="true">[logo Crédito Click]</span>
+        <!-- PLACEHOLDER logo Crédito Click -->
+      </div>
+    </div>
+
+    <form
+      class="login-form"
+      (submit)="$event.preventDefault(); onSubmit()"
+      novalidate
+      aria-describedby="login-instructions"
+    >
+      <p id="login-instructions" class="visually-hidden">
+        Introduzca sus credenciales de Crédito Click. Todos los campos son obligatorios.
+      </p>
+
+      <div class="form-field">
+        <label class="visually-hidden" for="conc-username">
+          {{ data().userPlaceholder }}
+        </label>
+        <input
+          id="conc-username"
+          name="username"
+          type="text"
+          class="login-input"
+          [placeholder]="data().userPlaceholder"
+          [value]="username()"
+          (input)="username.set($any($event.target).value)"
+          autocomplete="username"
+          required
+          aria-required="true"
+          spellcheck="false"
+          autocapitalize="off"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="visually-hidden" for="conc-password">
+          {{ data().passwordPlaceholder }}
+        </label>
+        <input
+          id="conc-password"
+          name="password"
+          type="password"
+          class="login-input"
+          [placeholder]="data().passwordPlaceholder"
+          [value]="password()"
+          (input)="password.set($any($event.target).value)"
+          autocomplete="current-password"
+          required
+          aria-required="true"
+          spellcheck="false"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="login-button"
+        [attr.aria-label]="data().loginButton + ' en Crédito Click'"
+      >
+        {{ data().loginButton }}
+      </button>
+    </form>
+  </aside>
+</section>
