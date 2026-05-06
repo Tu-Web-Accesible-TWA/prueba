@@ -1,51 +1,20 @@
-<table class="tabla-riesgo" role="region" aria-label="Información de riesgo y garantía del depósito">
-  <thead>
-    <tr>
-      <th colspan="2" class="fila-alerta">
-        La alerta de liquidez afecta sólo al depósito.
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="celda-indicador">
-        <div class="riesgo-wrapper" aria-label="Nivel de riesgo 1 de 6">
-          <span class="numero-grande" aria-hidden="true">1</span>
-          <span class="numero-total" aria-hidden="true">/6</span>
-        </div>
-        <p class="texto-pequeno">
-          Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.
-        </p>
-      </td>
+<ng-template #recursiveNode let-nodelist>
+  @for (node of nodelist; track node) {
+    @switch (node.type) {
       
-      <td class="celda-legal">
-        <p>
-          Banco Cetelem S.A.U. se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito previsto en el Real Decreto 16/2011, de 14 de octubre. Para depósitos en dinero, el importe máximo garantizado es de 100.000 € por depositante en cada entidad de crédito.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="2" class="fila-comisiones">
-        <div class="comisiones-content">
-          <span class="iconos-bloqueo" aria-hidden="true">🔒 🔒</span>
-          <p>
-            El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones.
-          </p>
-        </div>
-      </td>
-    </tr>
-  </tfoot>
-</table>
+      @case ('strong') {<strong>{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</strong>}
 
-<td colspan="2" class="fila-comisiones">
-  <div class="comisiones-content">
-    <svg class="icon-svg" viewBox="0 0 12 12">
-      <path d="M9.5 5H10C10.2761 5 10.5 5.22385 10.5 5.5V10.5C10.5 10.7761 10.2761 11 10 11H2C1.72386 11 1.5 10.7761 1.5 10.5V5.5C1.5 5.22385 1.72386 5 2 5H2.5V4.5C2.5 2.56701 4.06701 1 6 1C7.933 1 9.5 2.56701 9.5 4.5V5ZM2.5 6V10H9.5V6H2.5ZM5.5 7H6.5V9H5.5V7ZM8.5 5V4.5C8.5 3.11929 7.3807 2 6 2C4.61929 2 3.5 3.11929 3.5 4.5V5H8.5Z" />
-    </svg>
-    <svg class="icon-svg" viewBox="0 0 12 12">...</svg>
-    
-    <p>El reembolso, rescate o la devolución anticipada...</p>
-  </div>
-</td>
+      @case ('em') {<em>{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</em>}
+
+      @case ('sub') {<sub>{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</sub>}
+
+      @case ('sup') {<sup>{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</sup>}
+
+      @case ('underline') {<span class="underline">{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</span>}
+
+      @case ('link') {<a [href]="node.href" class="rt-link" target="_blank" rel="noopener noreferrer">{{ node.content }}@if (node.children?.length) {<ng-container *ngTemplateOutlet="recursiveNode; context: { $implicit: node.children }" />}</a>}
+
+      @default {{{ node.content }}}
+    }
+  }
+</ng-template>
