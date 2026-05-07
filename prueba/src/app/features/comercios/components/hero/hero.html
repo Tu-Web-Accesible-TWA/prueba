@@ -1,0 +1,95 @@
+<section class="hero" aria-labelledby="comercios-hero-title" lang="es">
+  <div
+    class="hero-image-side"
+    [style.backgroundImage]="'url(' + data().image + ')'"
+    role="img"
+    [attr.aria-label]="data().imageAlt"
+  >
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title" id="comercios-hero-title">{{ data().title }}</h1>
+      <p class="hero-description">{{ data().description }}</p>
+
+      <a
+        [href]="data().ctaUrl"
+        class="hero-cta"
+        [attr.aria-label]="data().ctaText + ' sobre comercios'"
+      >
+        {{ data().ctaText }}
+      </a>
+    </div>
+  </div>
+
+  <aside class="hero-login" aria-labelledby="comercios-login-title">
+    <h2 class="login-title" id="comercios-login-title">{{ data().loginTitle }}</h2>
+
+    <form
+      class="login-form"
+      (submit)="$event.preventDefault(); onSubmit()"
+      novalidate
+      aria-describedby="comercios-login-instructions"
+    >
+      <p id="comercios-login-instructions" class="visually-hidden">
+        Introduzca sus credenciales para acceder al área privada de comercios.
+        Todos los campos son obligatorios.
+      </p>
+
+      <div class="form-field">
+        <label class="visually-hidden" for="comercios-username">
+          {{ data().userPlaceholder }}
+        </label>
+        <input
+          id="comercios-username"
+          name="username"
+          type="text"
+          class="login-input"
+          [placeholder]="data().userPlaceholder"
+          [value]="username()"
+          (input)="username.set($any($event.target).value)"
+          autocomplete="username"
+          required
+          aria-required="true"
+          spellcheck="false"
+          autocapitalize="off"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="visually-hidden" for="comercios-password">
+          {{ data().passwordPlaceholder }}
+        </label>
+        <input
+          id="comercios-password"
+          name="password"
+          type="password"
+          class="login-input"
+          [placeholder]="data().passwordPlaceholder"
+          [value]="password()"
+          (input)="password.set($any($event.target).value)"
+          autocomplete="current-password"
+          required
+          aria-required="true"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="login-actions">
+        <a
+          [href]="data().forgotPasswordUrl"
+          class="login-forgot"
+        >
+          {{ data().forgotPasswordText }}
+        </a>
+
+        <button
+          type="submit"
+          class="login-button"
+          [attr.aria-label]="data().loginButton + ' en el área privada de comercios'"
+        >
+          {{ data().loginButton }}
+        </button>
+      </div>
+    </form>
+  </aside>
+</section>

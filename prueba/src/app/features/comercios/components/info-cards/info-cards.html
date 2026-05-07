@@ -1,0 +1,21 @@
+<section
+  class="info-cards-section"
+  aria-labelledby="comercios-info-cards-heading"
+>
+  <h2 id="comercios-info-cards-heading" class="visually-hidden">
+    Soluciones para comercios
+  </h2>
+
+  <ul class="info-cards-grid" role="list">
+    @for (card of cards(); track card.title) {
+      <li class="info-cards-item">
+        <app-comercios-info-card
+          [title]="card.title"
+          [description]="card.description"
+          [image]="card.image"
+          [imageAlt]="card.imageAlt"
+        />
+      </li>
+    }
+  </ul>
+</section>

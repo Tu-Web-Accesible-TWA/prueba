@@ -30,6 +30,10 @@ export const routes: Routes = [
       {
         path: 'concesionarios',
         loadChildren: () => import('./features/concesionarios/concesionarios.routes').then(m => m.ConcesionariosRoutes)
+      },
+      {
+        path: 'comercios',
+        loadChildren: () => import('./features/comercios/comercios.routes').then(m => m.ComerciosRoutes)
       }
     ]
   },

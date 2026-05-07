@@ -1,0 +1,142 @@
+.trust-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  padding: 56px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.trust-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--black, #111);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.trust-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--dark-gray, #4b4f54);
+  margin: 0 0 16px;
+}
+
+.trust-image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.trust-image {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.trust-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.trust-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--lighter-gray, #e8e8e8);
+}
+
+.trust-stat-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-stat-icon img {
+  width: 56%;
+  height: 56%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.trust-stat-text {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  line-height: 1.3;
+}
+
+.trust-stat-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.trust-stat-unit {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.trust-stat-label {
+  font-size: 0.85rem;
+  color: var(--dark-gray, #4b4f54);
+  line-height: 1.4;
+  flex-basis: 100%;
+}
+
+@media (max-width: 1024px) {
+  .trust-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 24px;
+  }
+
+  .trust-title {
+    font-size: 1.5rem;
+  }
+
+  .trust-image-wrapper {
+    justify-content: center;
+  }
+
+  .trust-image {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-section {
+    padding: 32px 20px;
+  }
+
+  .trust-title {
+    font-size: 1.3rem;
+  }
+
+  .trust-image {
+    width: 140px;
+  }
+
+  .trust-stat-icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+}

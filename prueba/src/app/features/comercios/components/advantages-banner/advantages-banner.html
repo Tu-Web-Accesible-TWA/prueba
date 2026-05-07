@@ -1,0 +1,36 @@
+<section
+  class="advantages-banner"
+  aria-labelledby="comercios-advantages-title"
+>
+  <div class="advantages-inner">
+    <h2 class="advantages-title" id="comercios-advantages-title">
+      {{ data().title }}
+    </h2>
+
+    <ul class="advantages-list" role="list">
+      @for (bullet of data().bullets; track bullet.title) {
+        <li class="advantages-item">
+          <span class="advantages-icon" aria-hidden="true">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <div class="advantages-text">
+            <h3 class="advantages-item-title">{{ bullet.title }}</h3>
+            <p class="advantages-item-description">{{ bullet.description }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+
+    <h3 class="steps-title">{{ data().stepsTitle }}</h3>
+
+    <ol class="steps-list" aria-label="Pasos de funcionamiento de la web comercios">
+      @for (step of data().steps; track step.number) {
+        <li class="steps-item">
+          <span class="steps-number" aria-hidden="true">{{ step.number }}</span>
+          <span class="visually-hidden">Paso {{ step.number }}:</span>
+          <p class="steps-text">{{ step.text }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

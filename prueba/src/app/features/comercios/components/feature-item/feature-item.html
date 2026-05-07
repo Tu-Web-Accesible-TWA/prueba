@@ -1,0 +1,17 @@
+<article class="feature-item">
+  <span class="feature-icon" aria-hidden="true">
+    <img
+      [src]="icon()"
+      [alt]="iconAlt()"
+      width="32"
+      height="32"
+      loading="lazy"
+      decoding="async"
+    />
+  </span>
+
+  <div class="feature-text">
+    <h3 class="feature-title">{{ title() }}</h3>
+    <p class="feature-description">{{ description() }}</p>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+<section
+  class="features-section"
+  aria-labelledby="comercios-features-heading"
+>
+  <h2 id="comercios-features-heading" class="visually-hidden">
+    Ventajas de los servicios para comercios
+  </h2>
+
+  <ul class="features-grid" role="list">
+    @for (item of features(); track item.title) {
+      <li class="features-grid-item">
+        <app-comercios-feature-item
+          [icon]="item.icon"
+          [iconAlt]="item.iconAlt"
+          [title]="item.title"
+          [description]="item.description"
+        />
+      </li>
+    }
+  </ul>
+</section>

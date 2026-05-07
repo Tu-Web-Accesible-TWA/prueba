@@ -1,0 +1,56 @@
+<section
+  class="trust-section"
+  aria-labelledby="comercios-trust-title"
+>
+  <div class="trust-content">
+    <h2 class="trust-title" id="comercios-trust-title">{{ data().title }}</h2>
+    <p class="trust-description">{{ data().description }}</p>
+
+    <div class="trust-image-wrapper">
+      <img
+        class="trust-image"
+        [src]="data().characterImage"
+        [alt]="data().characterAlt"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <ul class="trust-stats" aria-label="Cifras destacadas de Cetelem">
+    @for (stat of data().stats; track $index) {
+      <li
+        class="trust-stat-item"
+        [style.borderBottomColor]="stat.color"
+      >
+        <span
+          class="trust-stat-icon"
+          [style.backgroundColor]="stat.color"
+          aria-hidden="true"
+        >
+          <img
+            [src]="stat.icon"
+            [alt]="stat.iconAlt"
+            width="28"
+            height="28"
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
+        <p class="trust-stat-text">
+          <strong
+            class="trust-stat-value"
+            [style.color]="stat.color"
+          >{{ stat.value }}</strong>
+          @if (stat.unit) {
+            <span
+              class="trust-stat-unit"
+              [style.color]="stat.color"
+            >{{ stat.unit }}</span>
+          }
+          <span class="trust-stat-label">{{ stat.label }}</span>
+        </p>
+      </li>
+    }
+  </ul>
+</section>

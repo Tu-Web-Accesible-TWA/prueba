@@ -1,35 +1,30 @@
 .hero {
   display: flex;
   width: 100%;
-  min-height: 480px;
+  min-height: 420px;
   background-color: #f5f5f5;
 }
 
 .hero-image-side {
   position: relative;
   flex: 1 1 60%;
-  min-height: 480px;
-  overflow: hidden;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
 
-.hero-image-placeholder {
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2a2a2a 0%, #444 100%);
-  /* PLACEHOLDER imagen de fondo */
-}
-
-.hero-image-placeholder::after {
-  content: 'IMAGEN HERO';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 1.25rem;
-  letter-spacing: 0.2em;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .hero-content {
@@ -40,68 +35,41 @@
   max-width: 560px;
 }
 
-.hero-category {
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  margin: 0 0 16px;
-  text-transform: uppercase;
-}
-
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1.1;
   font-weight: 700;
-  margin: 0 0 32px;
+  margin: 0 0 24px;
   color: #fff;
 }
 
-.hero-vehicles {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px;
-}
-
-.vehicle-icon {
-  width: 56px;
-  height: 56px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.icon {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 32px;
+  color: #fff;
+  opacity: 0.95;
 }
 
 .hero-cta {
   display: inline-block;
-  padding: 16px 32px;
-  border: 2px solid #fff;
+  padding: 14px 32px;
   border-radius: 56px;
+  background-color: var(--color-verde-cetelem, #337f37);
   color: #fff;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
+  border: 2px solid var(--color-verde-cetelem, #337f37);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .hero-cta:hover {
-  background-color: #fff;
-  color: #111;
+  background-color: var(--green-dark, #235726);
+  border-color: var(--green-dark, #235726);
 }
 
 .hero-cta:focus-visible {
-  background-color: #fff;
-  color: #111;
   outline: 3px solid #ffd54a;
   outline-offset: 3px;
 }
@@ -117,36 +85,11 @@
   justify-content: center;
 }
 
-.login-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
-  gap: 16px;
-}
-
 .login-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #111;
-  margin: 0;
+  margin: 0 0 24px;
   font-weight: 700;
-}
-
-.login-logo-placeholder {
-  width: 90px;
-  height: 56px;
-  background: #e2e2e2;
-  border: 1px dashed #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  /* PLACEHOLDER logo */
-}
-
-.login-logo-placeholder .icon {
-  color: #555;
-  font-size: 0.6rem;
 }
 
 .login-form {
@@ -155,10 +98,15 @@
   gap: 16px;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
 .login-input {
-  height: 56px;
-  border: 1px solid #c1c6c8;
-  border-radius: 56px;
+  height: 48px;
+  border: 1px solid var(--light-gray, #c1c6c8);
+  border-radius: 48px;
   padding: 0 24px;
   font-size: 1rem;
   font-family: inherit;
@@ -181,18 +129,37 @@
   outline-offset: 1px;
 }
 
-.form-field {
+.login-actions {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.login-forgot {
+  color: var(--color-verde-cetelem, #337f37);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+.login-forgot:focus-visible {
+  outline: 2px solid #ffd54a;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .login-button {
-  margin-top: 16px;
-  align-self: flex-end;
-  height: 56px;
-  min-width: 200px;
+  height: 48px;
+  min-width: 180px;
   padding: 0 32px;
-  border-radius: 56px;
+  border-radius: 48px;
   border: 0;
   background-color: var(--color-verde-cetelem, #337f37);
   color: #fff;
@@ -204,11 +171,11 @@
 }
 
 .login-button:hover {
-  background-color: #235726;
+  background-color: var(--green-dark, #235726);
 }
 
 .login-button:focus-visible {
-  background-color: #235726;
+  background-color: var(--green-dark, #235726);
   outline: 3px solid #ffd54a;
   outline-offset: 3px;
 }
@@ -235,7 +202,7 @@
 
   .hero-image-side {
     flex: 1 1 auto;
-    min-height: 320px;
+    min-height: 280px;
   }
 
   .hero-content {
@@ -251,16 +218,20 @@
     padding: 32px 24px;
   }
 
-  .login-header {
-    margin-bottom: 24px;
+  .login-title {
+    font-size: 1.3rem;
   }
 
-  .login-title {
-    font-size: 1.4rem;
+  .login-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .login-forgot {
+    text-align: center;
   }
 
   .login-button {
-    align-self: stretch;
     width: 100%;
   }
 }
@@ -271,16 +242,11 @@
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
-  .hero-vehicles {
-    gap: 12px;
-  }
-
-  .vehicle-icon {
-    width: 48px;
-    height: 48px;
+  .hero-description {
+    font-size: 0.95rem;
   }
 
   .hero-login {
