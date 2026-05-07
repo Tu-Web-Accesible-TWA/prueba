@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { COMERCIOS_TRUST } from '../../data/comercios.data';
+import { TrustData } from './trust.model';
 
 @Component({
   selector: 'app-comercios-trust-section',
@@ -8,5 +9,5 @@ import { COMERCIOS_TRUST } from '../../data/comercios.data';
   styleUrl: './trust-section.css',
 })
 export class TrustSection {
-  readonly data = signal(COMERCIOS_TRUST);
+  readonly data = signal<TrustData>(COMERCIOS_TRUST);
 }

@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { COMERCIOS_ADVANTAGES } from '../../data/comercios.data';
+import { AdvantagesData } from './advantages.model';
 
 @Component({
   selector: 'app-comercios-advantages-banner',
@@ -8,5 +9,5 @@ import { COMERCIOS_ADVANTAGES } from '../../data/comercios.data';
   styleUrl: './advantages-banner.css',
 })
 export class AdvantagesBanner {
-  readonly data = signal(COMERCIOS_ADVANTAGES);
+  readonly data = signal<AdvantagesData>(COMERCIOS_ADVANTAGES);
 }

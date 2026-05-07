@@ -1,4 +1,11 @@
-export const COMERCIOS_HERO_DATA = {
+import { HeroData } from '../components/hero/hero.model';
+import { BreadcrumbItem } from '../components/breadcrumbs/breadcrumb.model';
+import { Feature } from '../components/feature-item/feature.model';
+import { InfoCardData } from '../components/info-card/info-card.model';
+import { AdvantagesData } from '../components/advantages-banner/advantages.model';
+import { TrustData } from '../components/trust-section/trust.model';
+
+export const COMERCIOS_HERO_DATA: HeroData = {
   title: 'Somos la gran apuesta para tu negocio',
   description:
     'Nos esforzamos cada día en ofrecerte lo mejor a ti y a tus clientes, para conseguirlo te ofrecemos una financiación al alcance de todos para que comprar nunca haya sido tan fácil.',
@@ -14,12 +21,12 @@ export const COMERCIOS_HERO_DATA = {
   passwordPlaceholder: 'Clave de acceso'
 };
 
-export const COMERCIOS_BREADCRUMBS = [
+export const COMERCIOS_BREADCRUMBS: BreadcrumbItem[] = [
   { label: 'Inicio', url: '/' },
   { label: 'Comercios', url: null }
 ];
 
-export const COMERCIOS_FEATURES = [
+export const COMERCIOS_FEATURES: Feature[] = [
   {
     icon: '/comercios/iconos/monitor.png',
     iconAlt: 'Icono monitor',
@@ -43,7 +50,7 @@ export const COMERCIOS_FEATURES = [
   }
 ];
 
-export const COMERCIOS_INFO_CARDS = [
+export const COMERCIOS_INFO_CARDS: InfoCardData[] = [
   {
     title: 'Cercanía',
     image: '/comercios/imagen-de-cercania.jpg',
@@ -62,7 +69,7 @@ export const COMERCIOS_INFO_CARDS = [
   }
 ];
 
-export const COMERCIOS_ADVANTAGES = {
+export const COMERCIOS_ADVANTAGES: AdvantagesData = {
   title: 'Ventajas para tu negocio, y para tus clientes',
   backgroundImage: '/comercios/iconos/ventajas-negocio/fondo.jpg',
   backgroundAlt: 'Comerciante atendiendo a una clienta en su tienda',
@@ -90,7 +97,7 @@ export const COMERCIOS_ADVANTAGES = {
   ]
 };
 
-export const COMERCIOS_TRUST = {
+export const COMERCIOS_TRUST: TrustData = {
   title: 'Tienes razones para poder confiar en Cetelem...',
   description:
     'En Cetelem somos líderes en Innovación, somos la empresa experta en préstamos al consumo perteneciente al grupo BNP. Con más de 30 años de exprencia y 3,5 millones de clientes ofrecemos la mejor atención y la mayor flexibilidad.',

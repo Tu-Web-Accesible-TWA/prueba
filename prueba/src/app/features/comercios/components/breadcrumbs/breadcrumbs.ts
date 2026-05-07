@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { COMERCIOS_BREADCRUMBS } from '../../data/comercios.data';
+import { BreadcrumbItem } from './breadcrumb.model';
 
 @Component({
   selector: 'app-comercios-breadcrumbs',
@@ -8,5 +9,5 @@ import { COMERCIOS_BREADCRUMBS } from '../../data/comercios.data';
   styleUrl: './breadcrumbs.css',
 })
 export class Breadcrumbs {
-  readonly items = signal(COMERCIOS_BREADCRUMBS);
+  readonly items = signal<BreadcrumbItem[]>(COMERCIOS_BREADCRUMBS);
 }
