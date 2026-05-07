@@ -1,25 +1,50 @@
 <section
   class="advantages-banner"
   aria-labelledby="comercios-advantages-title"
+  [style.backgroundImage]="'url(' + data().backgroundImage + ')'"
+  [attr.aria-description]="data().backgroundAlt"
 >
-  <div class="advantages-inner">
-    <h2 class="advantages-title" id="comercios-advantages-title">
-      {{ data().title }}
-    </h2>
+  <div class="advantages-overlay" aria-hidden="true"></div>
 
-    <ul class="advantages-list" role="list">
-      @for (bullet of data().bullets; track bullet.title) {
-        <li class="advantages-item">
-          <span class="advantages-icon" aria-hidden="true">
-            <i class="fa-solid fa-circle-check"></i>
-          </span>
-          <div class="advantages-text">
-            <h3 class="advantages-item-title">{{ bullet.title }}</h3>
-            <p class="advantages-item-description">{{ bullet.description }}</p>
-          </div>
-        </li>
-      }
-    </ul>
+  <div class="advantages-inner">
+    <div class="advantages-top">
+      <div class="advantages-text-side">
+        <h2 class="advantages-title" id="comercios-advantages-title">
+          {{ data().title }}
+        </h2>
+
+        <ul class="advantages-list" role="list">
+          @for (bullet of data().bullets; track bullet.title) {
+            <li class="advantages-item">
+              <span class="advantages-icon" aria-hidden="true">
+                <img
+                  [src]="bullet.icon"
+                  [alt]="bullet.iconAlt"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div class="advantages-text">
+                <h3 class="advantages-item-title">{{ bullet.title }}</h3>
+                <p class="advantages-item-description">{{ bullet.description }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div
+        class="advantages-video"
+        role="region"
+        aria-label="Vídeo informativo sobre las ventajas de Cetelem para comercios"
+      >
+        <!-- Slot para el vídeo. Insertar aquí <video controls src="..."></video> -->
+      </div>
+    </div>
+
+    <div class="advantages-divider" aria-hidden="true"></div>
 
     <h3 class="steps-title">{{ data().stepsTitle }}</h3>
 

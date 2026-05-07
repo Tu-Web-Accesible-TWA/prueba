@@ -1,8 +1,20 @@
 .advantages-banner {
+  position: relative;
   background-color: var(--color-verde-cetelem, #337f37);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 56px 80px;
   margin: 24px 0;
+  isolation: isolate;
+}
+
+.advantages-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(51, 127, 55, 0.88);
+  z-index: -1;
 }
 
 .advantages-inner {
@@ -10,19 +22,31 @@
   margin: 0 auto;
 }
 
+.advantages-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.advantages-text-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .advantages-title {
-  font-size: 2rem;
-  line-height: 1.15;
+  font-size: 1.75rem;
+  line-height: 1.2;
   font-weight: 700;
-  margin: 0 0 32px;
+  margin: 0;
   color: #fff;
-  max-width: 580px;
 }
 
 .advantages-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -35,49 +59,78 @@
 }
 
 .advantages-icon {
-  flex: 0 0 auto;
-  font-size: 1.5rem;
-  color: #fff;
-  line-height: 1;
-  margin-top: 2px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .advantages-text {
   flex: 1;
+  min-width: 0;
 }
 
 .advantages-item-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 0 4px;
   color: #fff;
+  line-height: 1.3;
 }
 
 .advantages-item-description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
+}
+
+/* ----- Video slot ----- */
+
+.advantages-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-video video,
+.advantages-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ----- Divider + steps ----- */
+
+.advantages-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 40px 0 32px;
 }
 
 .steps-title {
   font-size: 1.15rem;
   font-weight: 700;
   text-align: center;
-  margin: 24px 0 24px;
+  margin: 0 0 24px;
   color: #fff;
-  position: relative;
-}
-
-.steps-title::before,
-.steps-title::after {
-  content: '';
-  display: inline-block;
-  width: 80px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.4);
-  vertical-align: middle;
-  margin: 0 16px;
 }
 
 .steps-list {
@@ -86,23 +139,23 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .steps-item {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 .steps-number {
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: #fff;
   color: var(--color-verde-cetelem, #337f37);
@@ -114,7 +167,7 @@
 }
 
 .steps-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   margin: 0;
   color: #fff;
@@ -137,19 +190,18 @@
     padding: 40px 24px;
   }
 
+  .advantages-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .advantages-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .steps-list {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-
-  .steps-title::before,
-  .steps-title::after {
-    width: 32px;
-    margin: 0 8px;
   }
 }
 
@@ -159,6 +211,16 @@
   }
 
   .advantages-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .advantages-divider {
+    margin: 32px 0 24px;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .advantages-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }

@@ -63,33 +63,30 @@ export const COMERCIOS_INFO_CARDS = [
 ];
 
 export const COMERCIOS_ADVANTAGES = {
-  title: 'Ventajas para tu negocio y para tus clientes',
+  title: 'Ventajas para tu negocio, y para tus clientes',
+  backgroundImage: '/comercios/iconos/ventajas-negocio/fondo.jpg',
+  backgroundAlt: 'Comerciante atendiendo a una clienta en su tienda',
   bullets: [
     {
-      title: 'Facilidad de pago para tus clientes, vinculado al tique',
+      icon: '/comercios/iconos/ventajas-negocio/smile.png',
+      iconAlt: 'Icono cara sonriente',
+      title: 'Facilidad de pago para tus clientes, comodidad para ti',
       description:
-        'Ofrece a tus clientes la posibilidad de financiar su compra de forma rápida y sencilla, en cuotas adaptadas a sus necesidades.'
+        'Ofrecer financiación a tus clientes es un motivo de peso para que digan sí a una compra'
     },
     {
-      title: 'Maneras nuevas de hacer el pago a plazos',
+      icon: '/comercios/iconos/ventajas-negocio/bolso.png',
+      iconAlt: 'Icono bolsa de compra',
+      title: 'Mueve tus ventas ofreciendo el pago a plazos',
       description:
-        'Pone a disposición soluciones flexibles para que el pago a plazos sea una experiencia ágil y transparente para todos.'
+        'Utiliza la financiación como herramienta de promoción y ventas para incrementar tus ingresos'
     }
   ],
   stepsTitle: 'Así funciona la web comercios',
   steps: [
-    {
-      number: '1',
-      text: 'Solicita tu acceso a través de tu comercial habitual.'
-    },
-    {
-      number: '2',
-      text: 'Gestiona y consulta el estado de tus operaciones online.'
-    },
-    {
-      number: '3',
-      text: 'Confirma el pago de tus operaciones cuando quieras.'
-    }
+    { number: '1', text: 'Solicitud y autorización instantánea del crédito.' },
+    { number: '2', text: 'Firma digital y subida de documentación on line.' },
+    { number: '3', text: 'Confirmación de pago de la operación en el momento.' }
   ]
 };
 
