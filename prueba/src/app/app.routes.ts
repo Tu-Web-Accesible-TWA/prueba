@@ -34,6 +34,10 @@ export const routes: Routes = [
       {
         path: 'comercios',
         loadChildren: () => import('./features/comercios/comercios.routes').then(m => m.ComerciosRoutes)
+      },
+      {
+        path: 'sobre-cetelem',
+        loadChildren: () => import('./features/sobre-cetelem/sobre-cetelem.routes').then(m => m.SobreCetelemRoutes)
       }
     ]
   },

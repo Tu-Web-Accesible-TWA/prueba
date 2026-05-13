@@ -1,0 +1,15 @@
+<div class="accordion-group">
+  <h3 class="accordion-group-title">{{ title() }}</h3>
+  <div class="accordion-group-list" role="list">
+    @for (item of items(); track item.id) {
+      <app-cetelem-accordion-item
+        [id]="item.id"
+        [title]="item.title"
+        [content]="item.content"
+        [videoUrl]="item.videoUrl ?? null"
+        [videoText]="item.videoText ?? null"
+        [defaultOpen]="item.defaultOpen ?? false"
+      />
+    }
+  </div>
+</div>

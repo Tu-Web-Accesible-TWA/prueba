@@ -1,0 +1,22 @@
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-group-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--black, #111);
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--lighter-gray, #e8e8e8);
+}
+
+.accordion-group-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-group + .accordion-group {
+  margin-top: 40px;
+}

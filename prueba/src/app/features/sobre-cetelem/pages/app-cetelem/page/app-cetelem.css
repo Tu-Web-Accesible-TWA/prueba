@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.app-cetelem-page {
+  outline: none;
+}
+
+.app-cetelem-page:focus-visible {
+  outline: 3px solid #ffd54a;
+  outline-offset: -3px;
+}
+
+.app-cetelem-divider {
+  border: 0;
+  border-top: 1px solid var(--lighter-gray, #e8e8e8);
+  max-width: 1120px;
+  margin: 16px auto 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px 16px;
+  background-color: var(--color-verde-cetelem, #337f37);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid #ffd54a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .app-cetelem-divider {
+    margin: 8px 24px 0;
+  }
+}

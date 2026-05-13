@@ -1,0 +1,19 @@
+<section
+  class="extras-section"
+  aria-labelledby="extras-section-heading"
+>
+  <div class="extras-section-inner">
+    <h2 class="extras-section-heading" id="extras-section-heading">
+      {{ heading() }}
+    </h2>
+
+    <div class="extras-section-groups">
+      @for (group of groups(); track group.id) {
+        <app-cetelem-accordion-group
+          [title]="group.title"
+          [items]="group.items"
+        />
+      }
+    </div>
+  </div>
+</section>

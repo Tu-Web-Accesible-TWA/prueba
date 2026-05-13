@@ -1,0 +1,44 @@
+<section class="hero" aria-labelledby="app-cetelem-hero-title" lang="es">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-category">{{ data().category }}</p>
+      <h1 class="hero-title" id="app-cetelem-hero-title">{{ data().title }}</h1>
+      <p class="hero-description">{{ data().description }}</p>
+
+      <div class="hero-qr-box" aria-label="Descarga la APP Cetelem mediante código QR">
+        <div
+          class="hero-qr-code"
+          role="img"
+          aria-label="Código QR de descarga de la APP Cetelem"
+        >
+          <!-- PLACEHOLDER código QR -->
+          <span class="icon" aria-hidden="true">[QR]</span>
+        </div>
+        <p class="hero-qr-caption">{{ data().qrCaption }}</p>
+      </div>
+
+      <a
+        [href]="data().ctaUrl"
+        class="hero-cta"
+        [attr.aria-label]="data().ctaText"
+      >
+        {{ data().ctaText }}
+      </a>
+
+      <p class="hero-version">
+        <span class="hero-version-icon" aria-hidden="true">✓</span>
+        {{ data().versionInfo }}
+      </p>
+    </div>
+
+    <div class="hero-image-side">
+      <img
+        class="hero-image"
+        [src]="data().heroImage"
+        [alt]="data().heroImageAlt"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
+</section>

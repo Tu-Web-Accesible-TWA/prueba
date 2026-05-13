@@ -1,0 +1,38 @@
+<div class="accordion-item" [class.is-open]="isOpen()">
+  <h3 class="accordion-item-heading">
+    <button
+      type="button"
+      class="accordion-item-trigger"
+      [attr.aria-expanded]="isOpen()"
+      [attr.aria-controls]="'accordion-panel-' + id()"
+      [id]="'accordion-trigger-' + id()"
+      (click)="toggle()"
+    >
+      <span class="accordion-item-title">{{ title() }}</span>
+      <span class="accordion-item-icon" aria-hidden="true">
+        {{ isOpen() ? '×' : '+' }}
+      </span>
+    </button>
+  </h3>
+
+  @if (isOpen()) {
+    <div
+      class="accordion-item-panel"
+      role="region"
+      [id]="'accordion-panel-' + id()"
+      [attr.aria-labelledby]="'accordion-trigger-' + id()"
+    >
+      <p class="accordion-item-content">{{ content() }}</p>
+      @if (videoUrl() && videoText()) {
+        <a
+          class="accordion-item-link"
+          [href]="videoUrl()"
+          [attr.aria-label]="videoText() + ' sobre ' + title()"
+        >
+          {{ videoText() }}
+          <span class="accordion-item-link-arrow" aria-hidden="true">→</span>
+        </a>
+      }
+    </div>
+  }
+</div>

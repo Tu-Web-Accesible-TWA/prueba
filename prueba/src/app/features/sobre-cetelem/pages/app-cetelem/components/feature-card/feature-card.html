@@ -1,0 +1,28 @@
+<article
+  class="feature-card"
+  [attr.aria-labelledby]="'feature-card-' + id() + '-title'"
+>
+  <div class="feature-card-image-wrapper">
+    <img
+      class="feature-card-image"
+      [src]="image()"
+      [alt]="imageAlt()"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <h3 class="feature-card-title" [id]="'feature-card-' + id() + '-title'">
+    {{ title() }}
+  </h3>
+  <p class="feature-card-description">{{ description() }}</p>
+
+  <a
+    class="feature-card-link"
+    [href]="videoUrl()"
+    [attr.aria-label]="videoText() + ' sobre ' + title()"
+  >
+    {{ videoText() }}
+    <span class="feature-card-link-arrow" aria-hidden="true">→</span>
+  </a>
+</article>
