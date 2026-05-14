@@ -8,32 +8,26 @@
 
   <div class="features-carousel-controls" aria-hidden="true">
     <button
+      #prev
       type="button"
       class="features-carousel-control"
-      (click)="scrollBy(-1)"
       aria-label="Ver elementos anteriores"
     >
       <span class="features-carousel-control-icon">‹</span>
     </button>
     <button
+      #next
       type="button"
       class="features-carousel-control"
-      (click)="scrollBy(1)"
       aria-label="Ver más elementos"
     >
       <span class="features-carousel-control-icon">›</span>
     </button>
   </div>
 
-  <ul
-    #track
-    class="features-carousel-track"
-    role="list"
-    tabindex="0"
-    aria-label="Funcionalidades de la APP Cetelem"
-  >
+  <swiper-container #swiper init="false">
     @for (item of features(); track item.id) {
-      <li class="features-carousel-item">
+      <swiper-slide>
         <app-cetelem-feature-card
           [id]="item.id"
           [title]="item.title"
@@ -43,7 +37,7 @@
           [videoUrl]="item.videoUrl"
           [videoText]="item.videoText"
         />
-      </li>
+      </swiper-slide>
     }
-  </ul>
+  </swiper-container>
 </section>

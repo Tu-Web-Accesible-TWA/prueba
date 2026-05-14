@@ -52,6 +52,27 @@
 
 .accordion-item-panel {
   padding: 0 0 18px;
+  overflow: hidden;
+  animation: accordion-open 240ms ease both;
+}
+
+@keyframes accordion-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 600px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-item-panel {
+    animation: none;
+  }
 }
 
 .accordion-item-content {

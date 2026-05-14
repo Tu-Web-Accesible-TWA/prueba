@@ -1,4 +1,9 @@
 .features-carousel-section {
+  --swiper-scrollbar-bg-color: var(--lighter-gray, #e8e8e8);
+  --swiper-scrollbar-drag-bg-color: var(--color-verde-cetelem, #337f37);
+  --swiper-scrollbar-size: 4px;
+  --swiper-scrollbar-bottom: 0;
+
   position: relative;
   padding: 56px 80px 64px;
   max-width: 1280px;
@@ -27,24 +32,27 @@
   border-radius: 50%;
   border: 1px solid var(--light-gray, #c1c6c8);
   background-color: #fff;
-  color: var(--color-verde-cetelem, #337f37);
+  color: var(--black, #111);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-family: inherit;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.features-carousel-control:hover,
-.features-carousel-control:focus-visible {
+.features-carousel-control:hover {
   background-color: var(--color-verde-cetelem, #337f37);
+  border-color: var(--color-verde-cetelem, #337f37);
   color: #fff;
 }
 
-.features-carousel-control:focus-visible {
-  outline: 2px solid #ffd54a;
-  outline-offset: 2px;
+.features-carousel-control.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #fff;
+  color: var(--black, #111);
+  border-color: var(--light-gray, #c1c6c8);
 }
 
 .features-carousel-control-icon {
@@ -53,29 +61,13 @@
   font-weight: 700;
 }
 
-.features-carousel-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 72px) / 4);
-  column-gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0 0 8px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
+swiper-container {
+  display: block;
+  padding-bottom: 24px;
 }
 
-.features-carousel-track:focus-visible {
-  outline: 2px solid #ffd54a;
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-.features-carousel-item {
-  scroll-snap-align: start;
-  display: flex;
+swiper-slide {
+  height: auto;
 }
 
 @media (max-width: 1024px) {
@@ -91,28 +83,15 @@
   .features-carousel-controls {
     display: none;
   }
-
-  .features-carousel-track {
-    grid-auto-columns: 70%;
-    column-gap: 16px;
-  }
 }
 
 @media (max-width: 480px) {
   .features-carousel-section {
     padding: 32px 20px 40px;
   }
-
-  .features-carousel-track {
-    grid-auto-columns: 80%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .features-carousel-track {
-    scroll-behavior: auto;
-  }
-
   .features-carousel-control {
     transition: none;
   }
