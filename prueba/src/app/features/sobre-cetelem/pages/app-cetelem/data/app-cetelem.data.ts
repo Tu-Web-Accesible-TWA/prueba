@@ -175,52 +175,94 @@ export interface FaqItem {
   contentHtml: string;
 }
 
-export const datosdelaseccion: FaqItem = {
-  title: 'Y aún puedes hacer mucho más…',
-  contentHtml:
-    '<h3>Préstamos y tarjetas</h3>' +
-    '<h4>Cambiar modo pago</h4>' +
-    '<p>Modifica el modo de pago de tus tarjetas y contratos cuando lo necesites.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Cambiar modo pago">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Apagar o encender tu tarjeta</h4>' +
-    '<p>Bloquea o desbloquea tu tarjeta de forma instantánea desde la App.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Apagar o encender tu tarjeta">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Cancelar tu tarjeta</h4>' +
-    '<p>Cancela tu tarjeta de manera segura desde la propia aplicación.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Cancelar tu tarjeta">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Simulador Préstamo Cetelem</h4>' +
-    '<p>Calcula la cuota y duración de tu préstamo antes de solicitarlo.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Simulador Préstamo Cetelem">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Descarga plan amortización</h4>' +
-    '<p>Descarga el plan de amortización de tus préstamos en formato PDF.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Descarga plan amortización">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h3>Mis gestiones</h3>' +
-    '<h4>Cambiar Contraseña</h4>' +
-    '<p>Actualiza tu contraseña de acceso de manera segura.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Cambiar Contraseña">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Gestión factura electrónica</h4>' +
-    '<p>Activa y consulta tus facturas electrónicas desde la App.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Gestión factura electrónica">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Subida DNI</h4>' +
-    '<p>Sube una imagen de tu DNI para mantener tus datos al día.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Subida DNI">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Chat</h4>' +
-    '<p>Contacta con un agente Cetelem directamente desde el chat.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Chat">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Descargar la APP Cetelem</h4>' +
-    '<p>Encuentra los enlaces para descargar la APP en App Store y Google Play.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Descargar la APP Cetelem">Ver vídeo →</a>' +
-    '<br><br>' +
-    '<h4>Cambiar domiciliación</h4>' +
-    '<p>Cambia de forma sencilla la domiciliación de tus productos.</p>' +
-    '<a href="#" aria-label="Ver vídeo sobre Cambiar domiciliación">Ver vídeo →</a>',
+export interface FaqDetailsModel {
+  sectionBlockText: {
+    title: string;
+  };
+  faqItem: FaqItem[];
+}
+
+export const FAQ_SECTION_DATA: FaqDetailsModel = {
+  sectionBlockText: {
+    title: 'Y aún puedes hacer mucho más…',
+  },
+  faqItem: [
+    {
+      title: 'Cambiar modo pago',
+      contentHtml: `
+        <p>Modifica el modo de pago de tus tarjetas y contratos cuando lo necesites.</p>
+        <a href="#" aria-label="Ver vídeo sobre Cambiar modo pago">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Apagar o encender tu tarjeta',
+      contentHtml: `
+        <p>Bloquea o desbloquea tu tarjeta de forma instantánea desde la App.</p>
+        <a href="#" aria-label="Ver vídeo sobre Apagar o encender tu tarjeta">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Cancelar tu tarjeta',
+      contentHtml: `
+        <p>Cancela tu tarjeta de manera segura desde la propia aplicación.</p>
+        <a href="#" aria-label="Ver vídeo sobre Cancelar tu tarjeta">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Simulador Préstamo Cetelem',
+      contentHtml: `
+        <p>Calcula la cuota y duración de tu préstamo antes de solicitarlo.</p>
+        <a href="#" aria-label="Ver vídeo sobre Simulador Préstamo Cetelem">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Descarga plan amortización',
+      contentHtml: `
+        <p>Descarga el plan de amortización de tus préstamos en formato PDF.</p>
+        <a href="#" aria-label="Ver vídeo sobre Descarga plan amortización">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Cambiar Contraseña',
+      contentHtml: `
+        <p>Actualiza tu contraseña de acceso de manera segura.</p>
+        <a href="#" aria-label="Ver vídeo sobre Cambiar Contraseña">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Gestión factura electrónica',
+      contentHtml: `
+        <p>Activa y consulta tus facturas electrónicas desde la App.</p>
+        <a href="#" aria-label="Ver vídeo sobre Gestión factura electrónica">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Subida DNI',
+      contentHtml: `
+        <p>Sube una imagen de tu DNI para mantener tus datos al día.</p>
+        <a href="#" aria-label="Ver vídeo sobre Subida DNI">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Chat',
+      contentHtml: `
+        <p>Contacta con un agente Cetelem directamente desde el chat.</p>
+        <a href="#" aria-label="Ver vídeo sobre Chat">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Descargar la APP Cetelem',
+      contentHtml: `
+        <p>Encuentra los enlaces para descargar la APP en App Store y Google Play.</p>
+        <a href="#" aria-label="Ver vídeo sobre Descargar la APP Cetelem">Ver vídeo →</a>
+      `,
+    },
+    {
+      title: 'Cambiar domiciliación',
+      contentHtml: `
+        <p>Cambia de forma sencilla la domiciliación de tus productos.</p>
+        <a href="#" aria-label="Ver vídeo sobre Cambiar domiciliación">Ver vídeo →</a>
+      `,
+    },
+  ],
 };
