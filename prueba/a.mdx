@@ -1,0 +1,35 @@
+import android.view.View
+import android.view.accessibility.AccessibilityNodeInfo
+import androidx.core.content.ContextCompat
+
+override fun bindView(holder: BaseListAdapter.ViewHolder, item: LoanProject, isSelected: Boolean) {
+    (holder as? BaseListAdapter.LoanCategoryViewHolder)?.let {
+        holder.imageCardItem.loadImageFromUrl(imageName = item.nameImg, resourceDir = BuildConfig.LOAN_SIMULATOR_...)
+        holder.typeCardItem.text = item.description
+        holder.mainView.outlineProvider = if (isSelected) ViewOutlineProvider.BACKGROUND else BaseDomContractList...
+
+        // 1. Asignamos el rol de botón de selección a la vista principal de la tarjeta
+        holder.mainView.accessibilityDelegate = object : View.AccessibilityDelegate() {
+            override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfo) {
+                super.onInitializeAccessibilityNodeInfo(host, info)
+                info.className = "android.widget.RadioButton" // Le dice a TalkBack que es un botón de opción
+            }
+        }
+
+        if (isSelected) {
+            holder.mainView.background = ContextCompat.getDrawable(context = this, resid = R.drawable.selecte...)
+            holder.icon.visibility = View.VISIBLE
+            
+            // 2. SOLUCIÓN ACCESIBILIDAD: Marcamos la vista como seleccionada para TalkBack
+            holder.mainView.isSelected = true
+            
+        } else {
+            holder.mainView.background = ContextCompat.getDrawable(context = this, resid = R.drawable.non_sel...)
+            holder.icon.visibility = View.INVISIBLE
+            
+            // 3. SOLUCIÓN ACCESIBILIDAD: Marcamos la vista como NO seleccionada para TalkBack
+            holder.mainView.isSelected = false
+        }
+    }
+}
+
