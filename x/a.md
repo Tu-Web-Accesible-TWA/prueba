@@ -8,8 +8,15 @@ private fun setupAccessibility() {
             info: android.view.accessibility.AccessibilityNodeInfo
         ) {
             super.onInitializeAccessibilityNodeInfo(host, info)
-            // Esto fuerza a TalkBack a leer la frase completa
-            info.hintText = textoAccesibilidad
+            
+            // Controlamos el nivel de API para evitar el error de compilación
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                // Dispositivos modernos (Android 8.0+)
+                info.hintText = textoAccesibilidad
+            } else {
+                // Dispositivos antiguos (Android 7.0 y 7.1)
+                info.contentDescription = "Ingresos $textoAccesibilidad"
+            }
         }
     }
 
@@ -20,8 +27,15 @@ private fun setupAccessibility() {
             info: android.view.accessibility.AccessibilityNodeInfo
         ) {
             super.onInitializeAccessibilityNodeInfo(host, info)
-            // Esto fuerza a TalkBack a leer la frase completa
-            info.hintText = textoAccesibilidad
+            
+            // Controlamos el nivel de API para evitar el error de compilación
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                // Dispositivos modernos (Android 8.0+)
+                info.hintText = textoAccesibilidad
+            } else {
+                // Dispositivos antiguos (Android 7.0 y 7.1)
+                info.contentDescription = "Gastos $textoAccesibilidad"
+            }
         }
     }
 }
