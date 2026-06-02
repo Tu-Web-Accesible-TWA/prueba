@@ -31,3 +31,30 @@ export class List implements OnInit{
       // Resultado: "seccion-12-el-pinguino-corre-en-espana"
   }
 }
+
+export function generateSeoSlug(title: string): string {
+  // 1. Diccionario de palabras vacías (Stop Words) en español a eliminar
+  const stopWords = new Set([
+    'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas',
+    'de', 'del', 'al', 'para', 'por', 'con', 'como', 'sobre',
+    'y', 'o', 'e', 'u', 'en', 'su', 'sus', 'tu', 'tus', 'que'
+  ]);
+
+  return title
+    .toLowerCase()
+    // 2. Traducir símbolos comunes antes de limpiar
+    .replace(/&/g, ' y ') 
+    // 3. Normalizar y eliminar acentos (á -> a, ñ -> n)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    // 4. Eliminar cualquier cosa que no sea letra, número o espacio
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    // 5. Dividir en palabras para filtrar las 'stop words'
+    .split(/[\s_-]+/)
+    .filter(word => !stopWords.has(word) && word.length > 0)
+    // 6. Si el título se quedara vacío (ej: "El o la"), usar las palabras originales limpias
+    .slice(0) 
+    // 7. Unir con un único guión medio
+    .join('-');
+}
