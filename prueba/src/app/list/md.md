@@ -1,4 +1,4 @@
-El titular/es dispondrá/n de un plazo de **catorce días naturales** para desistir de su contrato de crédito desde la fecha de su suscripción o bien, si fuera posterior, desde la recepción de las condiciones contractuales y la información obligatoria que establezca la ley, sin indicación de motivos ni penalización alguna, para lo cual, el titular/es deberá/án comunicar el desistimiento:
+`El titular/es dispondrá/n de un plazo de **catorce días naturales** para desistir de su contrato de crédito desde la fecha de su suscripción o bien, si fuera posterior, desde la recepción de las condiciones contractuales y la información obligatoria que establezca la ley, sin indicación de motivos ni penalización alguna, para lo cual, el titular/es deberá/án comunicar el desistimiento:
 
 * Mediante el envío de escrito por correo certificado con acuse de recibo u otro medio que permita acreditar el envío y recepción, al Servicio de Atención al Cliente de BANCO CETELEM, S.A.U., Paseo de los Melancólicos 14 A 28005 Madrid,
 * Llamando al teléfono 917909790 o 900505969 o bien,
@@ -25,4 +25,4 @@ Para formular su derecho de desistimiento podrá hacer uso del modelo de formula
   
   <p><strong>Firma del cliente:</strong></p>
   <br><br><br>
-</div>
+</div>`
