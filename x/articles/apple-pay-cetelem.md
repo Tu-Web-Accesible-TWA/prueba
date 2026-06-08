@@ -7,5 +7,3 @@ Con el enrolamiento de la tarjeta Cetelem en Apple Pay, podrás pagar de un modo
 Empieza a pagar de forma **más rápida y segura con Apple Pay**.
 
 \* Para ver la lista de dispositivos compatibles con Apple Pay, consulta <a href="https://support.apple.com/en-us/HT208531">esta página</a>.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

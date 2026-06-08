@@ -49,5 +49,3 @@ Y, como no podía ser de otro modo, dependerá del tamaño de la vivienda a tras
 **Por norma general en un solo día suele estar todo listo**, **aunque pueden llegar a ser necesarios dos días completos.**
 
 Así que, ¡ya lo sabes! **Si quieres saber cuánto cuesta hacer una mudanza desglosa todos los puntos que te hemos explicado** en este post. Una vez inicies todos los trámites será cuestión de días que puedas iniciar tu nueva vida en el hogar de tus sueños.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

@@ -15,5 +15,3 @@ El CFriday es una iniciativa de financiación que hemos lanzado en colaboración
 - Y hemos ofrecido una iniciativa de impacto para vosotros, nuestros clientes, porque habéis podido disfrutar de una financiación con unas condiciones inmejorables.
 
 Muchas gracias por haberlo hecho posible.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

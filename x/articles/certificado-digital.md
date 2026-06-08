@@ -31,5 +31,3 @@ Pues que para obtener el certificado digital la Fábrica Nacional de Moneda y Ti
 En ese caso es necesaria la presencia física del representante en la oficina de registro. Donde, además, se deberá presentar un documento que acredite la capacidad para actuar en nombre de la persona jurídica a la que se quiere representar.
 
 Este trámite para conseguir el certificado digital tiene un coste de 14 euros (IVA).
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

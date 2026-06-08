@@ -9,5 +9,3 @@ La segunda mesa redonda ha contado con la presencia de Ismael Labrador, CEO y co
 El encuentro ha puesto el foco en los **nuevos modelos de consumo más sostenibles y circulares**, sobre el empuje de la sociedad para que las empresas avancen en productos y procesos más sostenibles, como también sobre el futuro rol de las empresas en  la luchacontra el cambio climático.
 
 <a href="https://www.youtube.com/watch?v=T0HP6ZogDHQ">Ver Video</a> - 2ª Mesa Redonda eCommerce - Sostenibilidad y economía circular
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

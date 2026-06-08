@@ -32,5 +32,3 @@ Por tanto, antes de alquilar una vivienda, tanto si eres arrendatario como arren
 **La validez del certificado energético dura hasta 10 años desde el mismo día en el que se lleva a cabo el registro en el organismo competente de tu comunidad autónoma**. Por tanto, no es necesario que cada vez que quieras alquilar tu inmueble solicites los mismos trámites, sino que durante todo el periodo de vigencia de tu certificado puedes ir entregando la copia del mismo, y hacerlo constar en el contrato, con los sucesivos inquilinos.
 
 Así que ¡ya lo sabes! **Si tienes pensado alquilar una vivienda, ya sea como arrendador o arrendatario, asegúrate de que el inmueble en cuestión cuente con el certificado de eficiencia energético en vigor**. **Y que, además, conste como tal en el contrato de arrendamiento**. Haz las cosas bien y ¡evita sanciones futuras!
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

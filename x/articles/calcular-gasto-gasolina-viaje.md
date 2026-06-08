@@ -35,5 +35,3 @@ Es decir, imaginemos que nuestro depósito, desde que hemos repostado hasta que 
 Ahora imaginemos que en la gasolinera que vamos a llenar nuestro deposito, el precio en euros por litro de combustible es de 1’05 euros. Si multiplicamos esta cantidad por los 6’92 litros que hemos consumido, sabremos que el importe de dinero que debemos destinar por cada 100 kilómetros que realicemos es de 7 euros con 26 centavos.
 
 ¡Así de sencillo! Ahora que sabes cómo calcular el gasto de gasolina para un viaje, solo te queda decidir dónde y con quién pasar un verano inolvidable. Además, si quieres disfrutar de tu viaje sin preocuparte por nada conoce todas las ventajas de nuestro <a href="https://www.cetelem.es/prestamos/prestamo-viajes">préstamo para viajes</a>.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

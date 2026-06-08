@@ -37,5 +37,3 @@ Para poder acogerse a esta **ayuda para madres trabajadoras**, en este caso es l
 **Las madres solo deberán comprobar que se está llevando a cabo la deducción** correctamente antes de presentar su declaración de la renta anual.
 
 Pero, además de estas dos **ayudas para madres trabajadoras**, también hay **otras prestaciones a las que se puede acceder**. Como la deducción de 2.400 euros del IRPF por el primer hijo, de 2.700 por el segundo y, más en los siguientes. También las ayudas para familias con ingresos anuales inferiores a 11.547,96 euros, en los **partos múltiples** o las ayudas para familias numerosas, **monoparentales** o con algún tipo de discapacidad.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

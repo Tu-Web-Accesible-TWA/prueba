@@ -41,5 +41,3 @@ La mayoría de las comunidades autónomas, no obstante, han puesto a disposició
 ## PROYECTOS A NIVEL INTERNACIONAL
 
 En el ámbito internacional, **España se acaba de sumar al PEPP-PT** (consorcio de Rastreo Paneuropeo de Proximidad para Preservar la Privacidad), un proyecto pensado para unir las fuerzas de los países europeos a la hora de buscar una solución común para luchar contra el coronavirus. El objetivo es la creación de un sistema para aplicaciones que contribuya a frenar las cadenas de contagio del Covid-19 “respetando los principios de privacidad europeos”.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

@@ -39,5 +39,3 @@ En el caso, por ejemplo, de que la transferencia se haya efectuado entre diferen
 En el hipotético caso de que la persona que ha recibido nuestra transferencia errónea no autorice a la entidad a hacer la devolución, puede llegar a ser condenado por apropiación indebida si el emisor recurre a las vías judiciales disponibles, pudiendo ser condenado a una pena de entre tres y seis meses tal y como dicta el Código Penal.
 
 Así que, ¡ya lo sabes! Si has realizado una **transferencia bancaria** errónea y necesitas anularla, **sigue las indicaciones que desde Cetelem te hemos dado y resuelve el problema cuanto antes**.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>

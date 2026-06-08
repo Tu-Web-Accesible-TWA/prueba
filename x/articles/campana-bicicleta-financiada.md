@@ -11,5 +11,3 @@ En **abril de 2018, Cetelem y ATEBI** suscribieron **un acuerdo de colaboración
 **La apuesta de Cetelem por el sector Bike es firme y en aumento**. Los servicios de Cetelem son uno de los motores de desarrollo del sector del ciclismo, puesto que facilitan el acceso a la financiación de los usuarios de bicicletas, con una operativa 100% digital, ágil y sencilla; e informan al cliente y a la tienda de forma clara y transparente, en el proceso de compra de crédito. Este acuerdo reafirma el compromiso de Cetelem por los sectores que, como el bike, potencian la responsabilidad medioambiental y el desarrollo sostenible.
 
 Los objetivos prioritarios del acuerdo entre ATEBI y Cetelem son la difusión del ciclismo, la formación de los profesionales vinculados al universo bike, la trasformación digital del comercio especializado y la promoción de todo tipo de soluciones financieras en el punto de venta.
-
-<a href="https://www.cetelem.es/creditocetelem/coche-nuevo/index.htm?utm_source=blogs&utm_medium=social&utm_campaign=annual_blog-cetelem"></a>
