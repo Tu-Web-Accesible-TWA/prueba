@@ -51,4 +51,4 @@ audit:dependencies:
   stage: verify
   script:
     - npm audit --audit-level=high
-  allow_failure: falsew
+  allow_failure: false
