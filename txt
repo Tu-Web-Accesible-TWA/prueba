@@ -1,16 +1,13 @@
-# Usamos una imagen ligera de Node compatible con Angular 21
 image: node:22-alpine
 
 variables:
-  # 🌟 CONFIGURA AQUÍ EL NOMBRE DE TU CARPETA:
   PROJECT_DIR: "nombre-de-tu-carpeta-angular"
 
+# 🌟 Reordenamos las etapas: primero Build, luego las Verificaciones
 stages:
-  - install
-  - verify
   - build
+  - verify
 
-# La caché se define desde la raíz, por lo que incluimos la variable de la carpeta
 cache:
   key:
     files:
@@ -19,54 +16,39 @@ cache:
     - $PROJECT_DIR/.npm/
     - $PROJECT_DIR/node_modules/
 
-# Este pipeline SOLO se ejecutará cuando se abra o actualice un Merge Request
 workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
-# 🌟 TRUCO CLAVE: Mueve el entorno a la carpeta del proyecto ANTES de que empiece cada trabajo
+# 🌟 Esto se ejecuta antes de CADA trabajo: entra en la carpeta e instala/recupera dependencias
 before_script:
   - cd $PROJECT_DIR
+  - npm ci --cache .npm --prefer-offline
 
-# --- ETAPA DE INSTALACIÓN ---
-install_dependencies:
-  stage: install
+# --- ETAPA DE COMPILACIÓN (Ahora va primero) ---
+build:app:
+  stage: build
   script:
-    - npm ci --cache .npm --prefer-offline
+    - npm run build -- --configuration=production
+  artifacts:
+    name: "dist-angular-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $PROJECT_DIR/dist/
+    expire_in: 1 week
 
-# --- ETAPA DE VERIFICACIÓN (En paralelo) ---
+# --- ETAPA DE VERIFICACIÓN (Se ejecutan en paralelo después del build) ---
 lint:code:
   stage: verify
   script:
     - npm run lint
-  dependencies:
-    - install_dependencies
 
 lint:style:
   stage: verify
   script:
     - npm run lint:style
-  dependencies:
-    - install_dependencies
 
 audit:dependencies:
   stage: verify
   script:
     - npm audit --audit-level=high
-  dependencies:
-    - install_dependencies
-  allow_failure: false
-
-# --- ETAPA DE COMPILACIÓN ---
-build:app:
-  stage: build
-  script:
-    - npm run build -- --configuration=production
-  dependencies:
-    - install_dependencies
-  artifacts:
-    name: "dist-angular-$CI_COMMIT_REF_SLUG"
-    # Los artefactos se buscan desde la raíz del repositorio al terminar el script
-    paths:
-      - $PROJECT_DIR/dist/
-    expire_in: 1 week
+  allow_failure: falsew
