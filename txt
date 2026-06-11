@@ -1,0 +1,65 @@
+# Usamos una imagen ligera de Node compatible con Angular 21 (Node 20 o 22)
+image: node:22-alpine
+
+# Definimos las etapas del pipeline
+stages:
+  - install
+  - verify
+  - build
+
+# Optimizamos tiempos guardando las dependencias en caché
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+    - node_modules/
+
+# Regla global: Este pipeline SOLO se ejecutará cuando se abra o actualice un Merge Request
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# --- ETAPA DE INSTALACIÓN ---
+install_dependencies:
+  stage: install
+  script:
+    - npm ci --cache .npm --prefer-offline
+
+# --- ETAPA DE VERIFICACIÓN (Se ejecutan en paralelo) ---
+lint:code:
+  stage: verify
+  script:
+    - npm run lint
+  dependencies:
+    - install_dependencies
+
+lint:style:
+  stage: verify
+  script:
+    - npm run lint:style
+  dependencies:
+    - install_dependencies
+
+audit:dependencies:
+  stage: verify
+  script:
+    # Falla el pipeline si encuentra vulnerabilidades de nivel "high" o "critical"
+    - npm audit --audit-level=high
+  dependencies:
+    - install_dependencies
+  allow_failure: false # Cambia a true si no quieres que un audit frene el MR
+
+# --- ETAPA DE COMPILACIÓN ---
+build:app:
+  stage: build
+  script:
+    - npm run build -- --configuration=production
+  dependencies:
+    - install_dependencies
+  artifacts:
+    name: "dist-angular-$CI_COMMIT_REF_SLUG"
+    paths:
+      - dist/
+    expire_in: 1 week
