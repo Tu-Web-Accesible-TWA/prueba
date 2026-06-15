@@ -1,0 +1,17 @@
+# Ventajas de las tarjetas de crédito online
+
+El mundo económico está cambiando y lo que hace unos años parecía inviable, ahora es más sencillo y seguro. Como la facilidad que tenemos hoy en día para conseguir tarjetas de crédito de calidad a un solo clic.
+
+Sí, ya es posible conseguir <a href="https://www.cetelem.es/tarjetas" target="_blank">tarjetas de crédito sin necesidad de acudir a un banco</a>, de rellenar papeleos o de esperar días y días hasta que llegan las primeras confirmaciones. Y aunque todo esto sea de manera más inmediata y sencilla, no debemos pensar que es inseguro o que tiene trampa. Al contrario: ahora es más fácil solicitar dicha información y ser consciente en todo momento de lo que este trámite supone. ¿Qué más se puede pedir?
+
+## Tarjetas de crédito online sin papeleos
+
+Es uno de los atractivos de solicitar una tarjeta de crédito por Internet. Su **agilidad, sencillez y seguridad** hace que en muy pocos días podamos tener en nuestro poder esta forma de pago. Es decir, que solicitando la tarjeta de crédito de esta manera nos ahorramos todo el engorroso papeleo y los innecesarios viajes para tenerla en nuestro poder. Una de las mayores ventajas es que no requiere ni mucho esfuerzo, ni mucho tiempo tener una de estas en nuestro poder. Pero, como bien hemos dicho al principio, agilidad y sencillez **no son sin****ónimos de inseguridad**. Todo lo contrario. Con este tipo de producto **podremos tener acceso a todos nuestros movimientos** y controlar de manera exhaustiva los préstamos o aplazamientos de pagos a los que recurrimos.
+
+## Cómo solicitar una tarjeta de crédito online de manera segura
+
+En **Cetelem disponemos de la Tarjeta de Cr****édito Opci****ón**+ con la que podrás tener tu dinero y pagar mediante este medio, sin necesidad de cambiarte de banco con el problema y trastorno que esto supone. Pero además de ser **ágil y sencillo**, ya que se puede obtener en este mismo instante por Internet, es **<a href="https://www.cetelem.es/seguros/seguro-proteccion-tarjetas" target="_blank">seguro</a>**,  ya que en todo momento **dispondr****ás de la informaci****ón que te supondr****á** **aplazar tus compras** o pedir un adelanto de dinero, con total transparencia. Para conseguirla solo necesitas rellenar un sencillo formulario, rápido e intuitivo, en el que solo necesitarás rellenar las casillas en blanco con los documentos que se soliciten, como el **documento de identidad, cuenta bancaria, datos personales,** como email y teléfono y **direcci****ón postal** para que la tarjeta de crédito llegue correctamente a su destinatario.
+
+## Ventajas se solicitar una tarjeta de crédito online
+
+Además de la seguridad y la agilidad de tener tu propia tarjeta de crédito 100% online de Cetelem, también tendrás un gran número de ventajas, como **no tener comisiones de emisi****ón ni de mantenimiento**, tramitar y gestionar todos los documentos de manera online e, incluso, **desde tu propio tel****éfono m****óvil**, y disfrutar de **descuentos exclusivos** en gasolineras o ventajas como seguros de viaje gratuitos. Sin duda, cada vez somos más los que recurrimos a internet para gestionar nuestro dinero e informarnos de los **productos 100% online y** <a href="https://www.cetelem.es/seguros/seguro-pagos-tarjetas" target="_blank">**seguros**</a> **que nos hacen la vida m****ás f****ácil**. Y este tipo de tarjeta de crédito es uno de ellos.
