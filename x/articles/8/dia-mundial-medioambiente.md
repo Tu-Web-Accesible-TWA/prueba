@@ -1,0 +1,11 @@
+# Celebra con nosotros el día Mundial del Medioambiente
+
+En BNP Paribas Personal Finance España hemos querido ser parte de la solución viviendo **una mañana de voluntariado en el Pantano de San Juan en Madrid junto a la Fundación Ecomar**, nuestro partner Volvo Cars España y nuestros compañeros de Arval. Esta experiencia EcoMar, enmarcada en la ***#VolvoCarsBeachCleanUp*** fue una gran manera de conmemorar el Día Mundial del Medioambiente, celebrado el pasado 5 de junio.
+
+## BNP Paribas y su compromiso con el medioambiente
+
+En BNP Paribas Personal Finance España, más conocidos en el mercado español a través de nuestra marca comercial Cetelem, tenemos el <a href="https://personal-finance.bnpparibas/en/engagement" target="_blank">propósito de promover el acceso a un consumo más responsable y sostenible para apoyar a nuestros clientes y socios</a>. De nuestro propósito se desprenden una serie de compromisos concretos, significativos y medibles que buscan generar un impacto positivo en la sociedad y nuestro entorno. En este sentido, hemos querido participar en esta iniciativa de la mano de Volvo Cars España, la Fundación Ecomar, y Arval, reafirmando nuestro compromiso con la reducción de nuestro impacto ambiental.
+
+La <a href="https://fundacionecomar.org/" target="_blank">Fundación ECOMAR</a> nació en 1998 de la mano de Theresa Zabell con el compromiso de devolver al mar todas las satisfacciones que le había dado durante su carrera deportiva. Sus objetivos desde el primer momento fueron el cuidado del medioambiente a través del deporte. La doble campeona olímpica tenía la necesidad de devolver al mar, de alguna manera, lo que el mar le había dado a ella y por eso la labor de la Fundación va encaminada a la limpieza de playas, generando concienciación y sumando voluntarios en cada iniciativa. En palabras de Teresa, “Debemos cuidar de los únicos dos sitios de los que no te podrás mudar jamás, tu cuerpo y tu planeta”.
+
+La iniciativa Volvo Cars Beach Clean Up nació en 2017 fruto del compromiso de Volvo Cars con la sostenibilidad, y cada año se fue asentando en la lucha por la concienciación del medio ambiente y la educación en materias de reciclaje y sostenibilidad, así como la vida sana a través del deporte.

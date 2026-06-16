@@ -1,0 +1,15 @@
+# ¿Concienciado con el medio ambiente? EcoAuto es tu préstamo
+
+El mundo está cambiando y ya somos muchos los que actuamos en referencia a cómo pensamos. Comida ecológica, compras de manera consciente y, sobre todo, un **transporte verde**, con cero emisiones al Medio Ambiente que nos permita desplazarnos a cualquier parte sin contaminar nada
+
+Son muchos los que están haciendo el cambio y están dando el paso para cambiar su **antiguo coche de gasolina o diésel**, por uno **híbrido o completamente eléctrico**. Y para aquellos que actúan conforme a sus pensamientos, <a href="https://www.cetelem.es/prestamos/coches-electricos-hibridos" target="_blank">**en Cetelem hemos creado el prestamo EcoAuto**</a>.
+
+## ¿Cuál es la mejor manera para financiar un coche eléctrico o híbrido?
+
+Seguro que eres de los que piensas en cambiar su antiguo coche y hacerse con uno híbrido e, incluso, **comprarse un coche 100% eléctrico**. Y es que, cada vez más, estos tipos de coches están ganando adeptos, ya que además de ser mucho más económicos a largo plazo, es porque este **transporte es 100% respetuoso con el medio ambiente**. Pero, sabemos que la **compra de un coche** es algo que hay que hacer de manera meditada ya que es una gran inversión de dinero en la que hay que pensar. Aunque el Estado esté fomentando el cambio de coches clásicos a "**coches verdes**", son muchas las personas que no tienen esa cantidad de dinero en líquido, cosa que hace que pensemos aún más en dar este paso o no. A día de hoy, son muchos los <a href="https://www.cetelem.es/prestamos" target="_blank">**productos financieros**</a> que nos ayudan y hacen que podamos hacer frente a cambios tan importantes como el de pasar de un coche de gasolina a un coche eléctrico. Y, sin duda, uno de los mejores productos del momento es el que acabamos de crear en Cetelem. **El primer producto financiero responsable con el medio ambiente**.
+
+## ¿Qué es el EcoAuto de Cetelem?
+
+Cetelem ha querido ser consciente con su pensamiento innovador y responsable y por eso ha creado el “**préstamo** **EcoAuto**”. Este producto financiero está pensado para que, si estás pensando en dar el paso y comprarte un **coche respetuoso con el Medio Ambiente**, este sea el último motivo que necesites para terminar de convencerte. Nuestro “**Préstamo** **EcoAuto**” es el único del mercado. Porque hemos tomado conciencia y queremos ayudar a la gente que quiere ayudar a mejorar el mundo en el que vivimos, en Cetelem ofrecemos un crédito que sea consecuente con tu estilo de **vida ECO**. Gracias al 3,00% de interés -uno de los más bajos del mercado- por fin podrás dar el paso y cambiar tu antiguo coche por uno 100% eléctrico. No esperes más y da, hoy mismo, el paso hacia un mundo más verde. En <a href="https://www.cetelem.es/sobre-cetelem" target="_blank">Cetelem</a> queremos ayudar a personas que piensan como tú (las que cambiaran el mundo).
+
+<a href="https://www.cetelem.es/prestamos/coches-electricos-hibridos" target="_blank">Consigue tu préstamo aquí</a>

@@ -1,0 +1,24 @@
+# ¿Cómo puede ayudarte el Seguro de Protección de Crédito?
+
+El crédito al consumo ha demostrado seguir siendo una de las principales fuerzas conductoras de la actividad económica.
+
+El acceso al crédito es clave para que muchos consumidores consigan alcanzar sus metas y desarrollar sus proyectos de vida. Más de la mitad de los hogares cuentan o han contratado un crédito para adquirir su vivienda u otros bienes. Tres de cada cuatro nuevos vehículos son adquiridos a través de un crédito personal.
+
+Los seguros de protección de crédito son un complemento perfecto para los préstamos al consumo. Este tipo de seguros, protege los activos de los consumidores y les proporcionan tranquilidad para continuar con su estilo de vida, particularmente en las situaciones de mayor vulnerabilidad (enfermedad, incapacidad, pérdida de empleo o fallecimiento) para ellos y sus familias.
+
+La crisis social y económica ocasionada por la COVID-19 en los últimos meses, ha subrayado la utilidad de los Seguros de Protección de Crédito. Históricamente, el Grupo BNP Paribas ya incluía en la mayoría de los países en los que opera, la protección contra los efectos de pandemias en sus contratos de vida. Pero no solo han dado cobertura en lo relativo a enfermedades, sino que estos seguros también han dado cobertura por situaciones de pérdida temporal de empleo, los llamados ERTE, una situación que han vivido muchos españoles en los últimos meses. Esta aproximación ha permitido ayudar a todos sus clientes frente a las consecuencias económicas del coronavirus.
+
+Desde el inicio de la crisis, **Cetelem** ha apoyado a sus clientes tratando de anticipar las consecuencias de la crisis (difiriendo pagos, restructurando crédito o asegurando cobertura). En relación con los seguros, se han implementado diferentes medidas teniendo en cuentas las necesidades socioeconómicas específicas de los consumidores.
+
+Los clientes con créditos al consumo y personales, que también contaran con un seguro de protección de crédito para los mismos, han podido beneficiarse de una mayor accesibilidad a su protección:
+
+- Se ha eliminado la aplicación del concepto de **“preexistencia”** en lo relativo a la COVID19 dentro de los contratos que contaban con limitaciones en caso de sufrir algunas enfermedades de manera previa a la contratación del seguro.
+- En el mismo sentido, y con el objetivo de activar la protección de los clientes afectados por la crisis sanitaria con la mayor brevedad, se ha reducido a la mitad el **periodo de carencia** de los seguros, asegurando su tranquilidad frente a situaciones de desempleo o incapacidad en menos de un mes tras su contratación.
+- Por otro lado, teniendo siempre presente la fidelidad de sus clientes, ambas entidades, han dado cobertura inmediata a las necesidades de todos aquellos clientes que, llevando **más de 10 años asegurados**, han declarado siniestros durante esta etapa, aceptando sus declaraciones de siniestro desde marzo hasta junio, aun habiendo superado la edad máxima contemplada.
+- Además, se ha prestado una especial atención a colectivos profesionales como los **autónomos**, que cuentan con una menor cobertura social en términos de desempleo. Muchos de los clientes de auto con cobertura de desempleo, han podido acceder de manera completamente gratuita a la protección por cese de actividad.
+- En caso de **moratoria,** la protección de los asegurados se ha extendido a toda la duración de la moratoria sin coste para los meses de moratoria (por ejemplo, para un crédito de 36 meses, con 3 meses de moratoria, los clientes han estado cubiertos por 39 meses con 3 meses gratuitos).
+- Y sumado a lo anterior, la **comunicación proactiva** con el asegurado se ha convertido en un elemento central de su experiencia también durante los peores momentos de la crisis sanitaria. Los clientes de Cetelem han podido beneficiarse de la **aceptación telefónica** de algunos de las declaraciones de siniestro, agilizando el proceso de declaración; así como recibir recordatorios vía e-mail o sms, como **recordatorio proactivo** de los pasos a seguir en el proceso de declaración de siniestro.
+
+Todas estas medidas han significado que, desde el inicio de la crisis, casi 6000 clientes de Cetelem se han visto beneficiados por los seguros de protección de pagos. Mensualmente, estas ayudas alcanzan a unos 1500 clientes, a quienes los seguros de protección de crédito les cubre una cuota mensual o la liquidación del capital pendiente de pago.
+
+Los seguros de protección de crédito de BNP Paribas Cardif se caracterizan por su **accesibilidad, transparencia y valor real**. La incorporación de un seguro de estas características a una solicitud de financiación es cada vez más sencilla y siempre adaptada a las necesidades reales y está siempre disponible en los diferentes canales de venta, junto con el asesoramiento más adecuado para su contratación.
