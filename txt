@@ -1,54 +1,74 @@
-image: node:22-alpine
+// Variables locales para facilitar cambios futuros
+$green-bg: #EBF2EB;
+$text-dark: #111;
+$text-secondary: var(--dark-gray);
+$br-main: 16px;
 
-variables:
-  PROJECT_DIR: "nombre-de-tu-carpeta-angular"
+.simulator-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1120px;
+  padding: 48px;
+  background-color: var(--color-neutral-white);
+  border-radius: $br-main;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
 
-# 🌟 Reordenamos las etapas: primero Build, luego las Verificaciones
-stages:
-  - build
-  - verify
+  .simulator-block {
+    display: flex;
+    gap: 64px;
 
-cache:
-  key:
-    files:
-      - $PROJECT_DIR/package-lock.json
-  paths:
-    - $PROJECT_DIR/.npm/
-    - $PROJECT_DIR/node_modules/
+    .left { width: 62.5%; gap: 40px; }
+    .right { width: 37.5%; }
+  }
 
-workflow:
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  // Estilos reutilizables para cajas
+  .green-box {
+    border-radius: $br-main;
+    background-color: $green-bg;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
-# 🌟 Esto se ejecuta antes de CADA trabajo: entra en la carpeta e instala/recupera dependencias
-before_script:
-  - cd $PROJECT_DIR
-  - npm ci --cache .npm --prefer-offline
+  .amount-box {
+    gap: 24px;
+    .total-amount { font-size: 32px; font-weight: 600; line-height: 1; }
+    .text-amount { font-size: 14px; line-height: 20px; }
+  }
 
-# --- ETAPA DE COMPILACIÓN (Ahora va primero) ---
-build:app:
-  stage: build
-  script:
-    - npm run build -- --configuration=production
-  artifacts:
-    name: "dist-angular-$CI_COMMIT_REF_SLUG"
-    paths:
-      - $PROJECT_DIR/dist/
-    expire_in: 1 week
+  .tin-box, .tae-box {
+    gap: 32px;
+    flex: 1; // Asegura que ocupen el mismo ancho
+    p { font-size: 1rem; color: $text-secondary; }
+    .limits p { font-size: 1.25rem; font-weight: 500; color: $text-dark; }
+  }
+  
+  .tae-box p { font-weight: 700; } // Sobrescribir solo lo necesario
 
-# --- ETAPA DE VERIFICACIÓN (Se ejecutan en paralelo después del build) ---
-lint:code:
-  stage: verify
-  script:
-    - npm run lint
+  .limits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    span:last-child { font-weight: 300; font-size: 0.75rem; color: $text-secondary; }
+  }
 
-lint:style:
-  stage: verify
-  script:
-    - npm run lint:style
+  .bottom {
+    padding-top: 24px;
+    border-top: 1px solid #E8E8E8;
+  }
 
-audit:dependencies:
-  stage: verify
-  script:
-    - npm audit --audit-level=high
-  allow_failure: false
+  /* Responsive */
+  @media (max-width: 1024px) {
+    max-width: 696px;
+    padding: 16px;
+    gap: 40px;
+    
+    .simulator-block { flex-direction: column; gap: 24px;
+      .left, .right { width: 100%; }
+    }
+  }
+
+  @media (max-width: 576px) {
+    max-width: 327px;
+  }
+}
