@@ -1,87 +1,116 @@
-.simulator-wrapper {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 16px;
-  padding: 32px 24px 24px;
-  background-color: #F5F5F7;
-  gap: 32px;
+// Variables
+$color-white: #ffffff;
+$color-gray-info: #747474;
+$color-error: #ff0000;
+$color-primary: #008000; // Verde
+
+.hero-empresas {
+  position: relative;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.67);
+    box-shadow: inset 0 8px 8px -4px rgba(0, 0, 0, 0.24);
+  }
+
+  .bg-img {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    img { width: 100%; height: 100%; object-fit: cover; }
+    .mobile-img, .tablet-img { display: none; }
+  }
 }
 
-.simulator-top {
-  gap: 32px;
+.left-side, .right-side {
+  padding: 60px;
+  gap: 30px;
+  width: 50%; // Asumimos 50/50 por defecto
 }
 
-.simulator-headlines {
+.left-side {
+  color: $color-white;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.right-side {
+  background: rgba($color-white, 0.9);
+  h2 { color: #4b4f54; font: 700 24px sans-serif; }
+}
+
+.btn-wrapper ::ng-deep .secondary {
+  color: $color-white;
+  border-color: $color-white;
+}
+
+// Formulario: Usamos la técnica de "Floating Label" optimizada
+.form-row {
+  position: relative;
+  margin-top: 30px;
+  
+  .input-field {
+    width: 100%;
+    padding: 10px 15px; // Asegura espacio para el texto
+    &:focus + .input-label,
+    &:not(:placeholder-shown) + .input-label {
+      top: 10px;
+      font-size: 12px;
+    }
+  }
+
+  .input-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+    pointer-events: none;
+    color: $color-gray-info;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 25px;
+  justify-content: end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.falseLnk {
+  color: $color-primary;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error {
+  color: $color-error;
   text-align: center;
-  gap: 8px;
-  & p { font-weight: 400; font-size: 1rem; line-height: 1rem; color: #4B4F54; }
-  & p:last-child { font-weight: 700; font-size: 3rem; line-height: 3rem; 
-    & span { font-size: 1.5rem; } 
-  }
+  margin-top: 30px;
 }
 
-.tin-tae {
-  gap: 24px;
-  justify-content: center;
-  div { 
-    gap: 12px; text-align: center;
-    & p { font-weight: 400; font-size: 24px; line-height: 24px; color: #4B4F54; }
-    & p:last-child { font-size: 14px; line-height: 14px; }
-  }
-  div:nth-child(3) p { font-weight: 500; }
+// Media Queries
+@media (max-width: 1200px) {
+  .hero-empresas { flex-direction: column; }
+  .desktop-img { display: none; }
+  .tablet-img { display: block; }
+  .left-side, .right-side { width: 100%; padding: 25px; }
+  .login-form { display: flex; gap: 20px; }
 }
 
-.area {
-  padding: 15px 16px;
-  background-color: white;
-  border: 1px solid #E8E8E8;
-  border-radius: 8px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: #337f37;
-}
-
-.breakdown {
-  gap: 16px;
-  .credit-cost { gap: 12px; }
-}
-
-.total-amount {
-  padding-top: 15px;
-  border-top: 1px solid #E8E8E8;
-}
-
-.breakdown-line {
-  justify-content: space-between;
-  align-items: center;
-  & p:first-child { font-weight: 400; font-size: 14px; line-height: 14px; }
-  & p { font-weight: 600; font-size: 1rem; line-height: 1rem; color: #4B4F54; }
-}
-
-.credit-cost .breakdown-line:nth-child(2),
-.credit-cost .breakdown-line:nth-child(3) {
-  & p { font-weight: 400; font-size: 12px; line-height: 12px; }
-}
-
-/* Responsive mantiene lógica, solo limpio display flex */
-@media (max-width: 1024px) {
-  .simulator-wrapper { padding: 24px 20px 20px; gap: 32px; }
-  .simulator-top { gap: 20px; }
-  .simulator-headlines {
-    & p { font-size: 14px; line-height: 14px; }
-    & p:last-child { font-size: 32px; line-height: 32px; & span { font-size: 1.5rem; } }
-  }
-  .tin-tae div {
-    & p { font-size: 20px; line-height: 20px; }
-    & p:last-child { font-size: 12px; line-height: 12px; }
-  }
-  .breakdown { gap: 12px; .credit-cost { gap: 8px; } }
-  .total-amount { gap: 12px; }
-  .breakdown-line {
-    & p:first-child { font-size: 12px; line-height: 12px; }
-    & p { font-size: 14px; line-height: 14px; }
-  }
-  .credit-cost .breakdown-line:nth-child(2),
-  .credit-cost .breakdown-line:nth-child(3) { & p { font-size: 11px; line-height: 11px; } }
+@media (max-width: 576px) {
+  .tablet-img { display: none; }
+  .mobile-img { display: block; }
+  .left-side { text-align: center; justify-content: center; }
+  .right-side { background-color: $color-white; }
+  .login-form { flex-direction: column; }
+  .actions { flex-direction: column; }
 }
