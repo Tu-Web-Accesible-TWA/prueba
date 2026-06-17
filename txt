@@ -1,74 +1,87 @@
-// Variables locales para facilitar cambios futuros
-$green-bg: #EBF2EB;
-$text-dark: #111;
-$text-secondary: var(--dark-gray);
-$br-main: 16px;
-
-.simulator-container {
-  margin: 0 auto;
+.simulator-wrapper {
   width: 100%;
-  max-width: 1120px;
-  padding: 48px;
-  background-color: var(--color-neutral-white);
-  border-radius: $br-main;
-  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+  max-width: 360px;
+  border-radius: 16px;
+  padding: 32px 24px 24px;
+  background-color: #F5F5F7;
+  gap: 32px;
+}
 
-  .simulator-block {
-    display: flex;
-    gap: 64px;
+.simulator-top {
+  gap: 32px;
+}
 
-    .left { width: 62.5%; gap: 40px; }
-    .right { width: 37.5%; }
+.simulator-headlines {
+  text-align: center;
+  gap: 8px;
+  & p { font-weight: 400; font-size: 1rem; line-height: 1rem; color: #4B4F54; }
+  & p:last-child { font-weight: 700; font-size: 3rem; line-height: 3rem; 
+    & span { font-size: 1.5rem; } 
   }
+}
 
-  // Estilos reutilizables para cajas
-  .green-box {
-    border-radius: $br-main;
-    background-color: $green-bg;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+.tin-tae {
+  gap: 24px;
+  justify-content: center;
+  div { 
+    gap: 12px; text-align: center;
+    & p { font-weight: 400; font-size: 24px; line-height: 24px; color: #4B4F54; }
+    & p:last-child { font-size: 14px; line-height: 14px; }
   }
+  div:nth-child(3) p { font-weight: 500; }
+}
 
-  .amount-box {
-    gap: 24px;
-    .total-amount { font-size: 32px; font-weight: 600; line-height: 1; }
-    .text-amount { font-size: 14px; line-height: 20px; }
-  }
+.area {
+  padding: 15px 16px;
+  background-color: white;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #337f37;
+}
 
-  .tin-box, .tae-box {
-    gap: 32px;
-    flex: 1; // Asegura que ocupen el mismo ancho
-    p { font-size: 1rem; color: $text-secondary; }
-    .limits p { font-size: 1.25rem; font-weight: 500; color: $text-dark; }
-  }
-  
-  .tae-box p { font-weight: 700; } // Sobrescribir solo lo necesario
+.breakdown {
+  gap: 16px;
+  .credit-cost { gap: 12px; }
+}
 
-  .limits {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    span:last-child { font-weight: 300; font-size: 0.75rem; color: $text-secondary; }
-  }
+.total-amount {
+  padding-top: 15px;
+  border-top: 1px solid #E8E8E8;
+}
 
-  .bottom {
-    padding-top: 24px;
-    border-top: 1px solid #E8E8E8;
-  }
+.breakdown-line {
+  justify-content: space-between;
+  align-items: center;
+  & p:first-child { font-weight: 400; font-size: 14px; line-height: 14px; }
+  & p { font-weight: 600; font-size: 1rem; line-height: 1rem; color: #4B4F54; }
+}
 
-  /* Responsive */
-  @media (max-width: 1024px) {
-    max-width: 696px;
-    padding: 16px;
-    gap: 40px;
-    
-    .simulator-block { flex-direction: column; gap: 24px;
-      .left, .right { width: 100%; }
-    }
-  }
+.credit-cost .breakdown-line:nth-child(2),
+.credit-cost .breakdown-line:nth-child(3) {
+  & p { font-weight: 400; font-size: 12px; line-height: 12px; }
+}
 
-  @media (max-width: 576px) {
-    max-width: 327px;
+/* Responsive mantiene lógica, solo limpio display flex */
+@media (max-width: 1024px) {
+  .simulator-wrapper { padding: 24px 20px 20px; gap: 32px; }
+  .simulator-top { gap: 20px; }
+  .simulator-headlines {
+    & p { font-size: 14px; line-height: 14px; }
+    & p:last-child { font-size: 32px; line-height: 32px; & span { font-size: 1.5rem; } }
   }
+  .tin-tae div {
+    & p { font-size: 20px; line-height: 20px; }
+    & p:last-child { font-size: 12px; line-height: 12px; }
+  }
+  .breakdown { gap: 12px; .credit-cost { gap: 8px; } }
+  .total-amount { gap: 12px; }
+  .breakdown-line {
+    & p:first-child { font-size: 12px; line-height: 12px; }
+    & p { font-size: 14px; line-height: 14px; }
+  }
+  .credit-cost .breakdown-line:nth-child(2),
+  .credit-cost .breakdown-line:nth-child(3) { & p { font-size: 11px; line-height: 11px; } }
 }
