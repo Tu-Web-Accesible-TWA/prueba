@@ -1,116 +1,181 @@
-// Variables
-$color-white: #ffffff;
-$color-gray-info: #747474;
-$color-error: #ff0000;
-$color-primary: #008000; // Verde
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../theming/cfgbank/all_typography';
 
-.hero-empresas {
-  position: relative;
-  overflow: hidden;
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+@include mat.core();
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.67);
-    box-shadow: inset 0 8px 8px -4px rgba(0, 0, 0, 0.24);
-  }
+// Note: Color palettes are generated from primary: #297bb1, secondary: #70838B
+$_palettes: (
+primary: (
+0: #000,
+10: #001e31,
+20: #003351,
+25: #003f61,
+30: #004b73,
+35: #005784,
+40: #006496,
+50: #2c7db3,
+60: #4c97cf,
+70: #69b2eb,
+80: #91ccff,
+90: #cce5ff,
+95: #e7f2ff,
+98: #f7f9ff,
+99: #fcfcff,
+100: #fff
+),
+secondary: (
+0: #000,
+10: #0b1e24,
+20: #21333a,
+25: #2c3e45,
+30: #374951,
+35: #43555d,
+40: #4f6169,
+50: #677a82,
+60: #81949c,
+70: #9baeb7,
+80: #b6cad2,
+90: #d2e6ef,
+95: #e0f4fd,
+98: #f2fbff,
+99: #f9fdff,
+100: #fff
+),
+tertiary: (
+0: #000,
+10: #320047,
+20: #491b5d,
+25: #552769,
+30: #613376,
+35: #6e3f82,
+40: #7b4b8f,
+50: #9664aa,
+60: #b17dc5,
+70: #ce97e2,
+80: #ebb2ff,
+90: #f8d8ff,
+95: #feebff,
+98: #fff7fb,
+99: #fffbff,
+100: #fff
+),
+neutral: (
+0: #000,
+10: #191c1f,
+20: #2d3134,
+25: #383c40,
+30: #44474b,
+35: #4f5357,
+40: #5b5f63,
+50: #74777c,
+60: #8e9195,
+70: #a9abb0,
+80: #c4c6cb,
+90: #e0e2e7,
+95: #eff1f6,
+98: #f7f9fe,
+99: #fcfcff,
+100: #fff,
+4: #0b0f12,
+6: #101417,
+12: #1d2024,
+17: #272a2e,
+22: #323539,
+24: #36393d,
+87: #d8dadf,
+92: #e6e8ed,
+94: #eceef3,
+96: #f2f3f8
+),
+neutral-variant: (
+0: #000,
+10: #151c23,
+20: #2a3138,
+25: #353c44,
+30: #40484f,
+35: #4c535b,
+40: #585f67,
+50: #707880,
+60: #8a919a,
+70: #a5acb5,
+80: #c0c7d0,
+90: #dce3ed,
+95: #eaf1fb,
+98: #f7f9ff,
+99: #fcfcff,
+100: #fff
+),
+error: (
+0: #000,
+10: #410002,
+20: #690005,
+25: #7e0007,
+30: #93000a,
+35: #a80710,
+40: #ba1a1a,
+50: #de3730,
+60: #ff5449,
+70: #ff897d,
+80: #ffb4ab,
+90: #ffdad6,
+95: #ffedea,
+98: #fff8f7,
+99: #fffbff,
+100: #fff
+)
+);
 
-  .bg-img {
-    position: absolute;
-    z-index: -2;
-    inset: 0;
-    img { width: 100%; height: 100%; object-fit: cover; }
-    .mobile-img, .tablet-img { display: none; }
-  }
-}
+$_rest: (
+secondary: map.get($_palettes, secondary),
+neutral: map.get($_palettes, neutral),
+neutral-variant: map.get($_palettes, neutral-variant),
+error: map.get($_palettes, error)
+);
+$_primary: map.merge(map.get($_palettes, primary), $_rest);
+$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
 
-.left-side, .right-side {
-  padding: 60px;
-  gap: 30px;
-  width: 50%; // Asumimos 50/50 por defecto
-}
-
-.left-side {
-  color: $color-white;
-  background: rgba(0, 0, 0, 0.01);
-}
-
-.right-side {
-  background: rgba($color-white, 0.9);
-  h2 { color: #4b4f54; font: 700 24px sans-serif; }
-}
-
-.btn-wrapper ::ng-deep .secondary {
-  color: $color-white;
-  border-color: $color-white;
-}
-
-// Formulario: Usamos la técnica de "Floating Label" optimizada
-.form-row {
-  position: relative;
-  margin-top: 30px;
-  
-  .input-field {
-    width: 100%;
-    padding: 10px 15px; // Asegura espacio para el texto
-    &:focus + .input-label,
-    &:not(:placeholder-shown) + .input-label {
-      top: 10px;
-      font-size: 12px;
-    }
-  }
-
-  .input-label {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.2s ease all;
-    pointer-events: none;
-    color: $color-gray-info;
-  }
-}
-
-.actions {
-  display: flex;
-  gap: 25px;
-  justify-content: end;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.falseLnk {
-  color: $color-primary;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.error {
-  color: $color-error;
-  text-align: center;
-  margin-top: 30px;
-}
-
-// Media Queries
-@media (max-width: 1200px) {
-  .hero-empresas { flex-direction: column; }
-  .desktop-img { display: none; }
-  .tablet-img { display: block; }
-  .left-side, .right-side { width: 100%; padding: 25px; }
-  .login-form { display: flex; gap: 20px; }
-}
-
-@media (max-width: 576px) {
-  .tablet-img { display: none; }
-  .mobile-img { display: block; }
-  .left-side { text-align: center; justify-content: center; }
-  .right-side { background-color: $color-white; }
-  .login-form { flex-direction: column; }
-  .actions { flex-direction: column; }
-}
+$cfgbank-theme-dark-theme: mat.define-theme(
+(
+color: (
+theme-type: dark,
+primary: $_primary,
+tertiary: $_tertiary,
+use-system-variables: true,
+// 👈 Added
+),
+typography: (
+brand-family: var(--client-typography-cfgbank-font-family),
+//
+plain-family: var(--client-typography-helvetica-font-family),
+//
+use-system-variables: true,
+// 👈 Added
+),
+density: (
+scale: 0
+)
+)
+);
+$cfgbank-theme-light-theme: mat.define-theme(
+(
+color: (
+theme-type: light,
+primary: $_primary,
+tertiary: $_tertiary,
+use-system-variables: true,
+// 👈 Added
+),
+typography: (
+brand-family: var(--client-typography-cfgbank-font-family),
+//
+plain-family: var(--client-typography-helvetica-font-family),
+//
+use-system-variables: true,
+// 👈 Added
+),
+density: (
+scale: 0
+)
+)
+);
