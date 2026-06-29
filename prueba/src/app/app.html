@@ -1,3 +1,16 @@
 <div>
-  <app-list [data]="data" class="prueba" />
+@let alturaVariable = 10;
+
+  <svg width="1" [attr.height]="alturaVariable ?? 84" fill="none" xmlns="http://www.w3.org/2000/svg"
+    style="display: block; width: 1px;" preserveAspectRatio="none">
+
+    <defs>
+      <pattern id="patron-guiones" patternUnits="userSpaceOnUse" width="1" height="8">
+        <line x1="0.5" y1="0" x2="0.5" y2="4" stroke="#337f37" stroke-width="1px" opacity="0.5"></line>
+      </pattern>
+    </defs>
+
+    <rect x="0" y="0" width="1" height="100%" fill="url(#patron-guiones)"></rect>
+
+  </svg>
 </div>
