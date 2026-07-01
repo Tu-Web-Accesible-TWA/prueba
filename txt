@@ -1,41 +1,50 @@
 getArticle(category: Signal<string>, article: Signal<string>) {
-  // 1. Petición para obtener los metadatos del artículo
-  const metaDataResource = httpResource<PostDetailModel>(() => {
-    const cat = category();
-    const art = article();
+    // Unificamos el proceso en un solo recurso reactivo
+    const articleResource = resource({
+      request: () => {
+        const cat = category();
+        const art = article();
+        if (!cat || !art) return null;
+        return { cat, art };
+      },
+      loader: async ({ request }) => {
+        if (!request) return null;
 
-    if (!cat || !art) return undefined;
+        const { cat, art } = request;
+        const metaUrl = `data/credito-zoom/articles/${cat}/${art}/metadata.json`;
 
-    return `data/credito-zoom/articles/${cat}/${art}/metadata.json`;
-  });
+        try {
+          // 1. Intentar obtener la metadata del artículo
+          // Si el JSON no existe y devuelve index.html, fallará automáticamente al parsear JSON.
+          const metadata = await firstValueFrom(this.http.get<PostDetailModel>(metaUrl));
 
-  // 2. Petición para obtener el contenido Markdown
-  const markdownResource = httpResource.text(() => {
-    const meta = metaDataResource.value();
+          if (!metadata || !metadata.contentMd) {
+            throw new Error('El archivo de metadata está vacío o no contiene la ruta del contenido.');
+          }
 
-    // Si no hay metadatos o no especifican la ruta del .md, no hace la petición
-    if (!meta || !meta.contentMd) return undefined;
+          // 2. Intentar obtener el contenido en Markdown
+          const markdownText = await firstValueFrom(
+            this.http.get(metadata.contentMd, { responseType: 'text' })
+          );
 
-    return `${meta.contentMd}`;
-  }, {
-    // INTERCEPTOR DE ERROR: Evita que el index.html se renderice como Markdown
-    transform: (text) => {
-      const cleanText = text.trim();
-      
-      if (cleanText.startsWith('<!DOCTYPE html>') || cleanText.startsWith('<html')) {
-        throw new Error('404: El archivo Markdown no existe en el servidor.');
+          // SOLUCCIÓN AL SEGUNDO PROBLEMA: Validar si lo devuelto es el index.html de la SPA
+          if (markdownText.trim().startsWith('<!DOCTYPE html>') || markdownText.trim().startsWith('<html')) {
+            throw new Error('No se encontró el archivo Markdown (el servidor devolvió index.html).');
+          }
+
+          return { metadata, markdown: markdownText };
+        } catch (err: any) {
+          // Lanzamos un error descriptivo que poblará automáticamente el `.error` del recurso
+          throw new Error(err.message || 'Error inesperado al cargar el artículo.');
+        }
       }
-      
-      return text;
-    }
-  });
+    });
 
-  // 3. Retorno unificado de los recursos y estados reactivos
-  return {
-    metadata: metaDataResource,
-    markdown: markdownResource,
-
-    isLoading: computed(() => metaDataResource.isLoading() || markdownResource.isLoading()),
-    error: computed(() => metaDataResource.error() || markdownResource.error()),
-  };
-}
+    // Mantenemos la firma de retorno limpia usando computeds expuestos externamente
+    return {
+      metadata: computed(() => articleResource.value()?.metadata),
+      markdown: computed(() => articleResource.value()?.markdown),
+      isLoading: articleResource.isLoading,
+      error: articleResource.error,
+    };
+  }
