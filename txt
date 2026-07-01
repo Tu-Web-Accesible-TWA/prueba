@@ -1,73 +1,41 @@
-{
- "extends": "stylelint-config-standard",
- "customSyntax": "postcss-scss",
- "rules": {
-  "alpha-value-notation": null,
-  "at-rule-no-vendor-prefix": null,
-  "at-rule-no-unknown": [
-   true,
-   {
-    "ignoreAtRules": [
-     "mixin",
-     "extend",
-     "include",
-     "content",
-     "return",
-     "function",
-     "if",
-     "else",
-     "for",
-     "each",
-     "while",
-     "debug",
-     "warn",
-     "error",
-     "use"
-    ]
-   }
-  ],
-  "no-invalid-position-at-import-rule": null,
-  "color-function-notation": null,
-  "declaration-block-no-redundant-longhand-properties": null,
-  "keyframes-name-pattern": null,
-  "font-family-no-missing-generic-family-keyword": null,
-  "function-no-unknown": [
-   true,
-   {
-    "ignoreFunctions": ["rba", "darken", "get", "map-get", "fade", "lighten"]
-   }
-  ],
-  "hue-degree-notation": "number",
-  "import-notation": "string",
-  "length-zero-no-unit": [
-   true,
-   {
-    "message": "Units are unnecessary for zero values. Omit them for cleaner code.",
-    "severity": "warning"
-   }
-  ],
-  "media-feature-range-notation": null,
-  "number-max-precision": 15,
-  "no-descending-specificity": null,
-  "no-empty-source": null,
-  "no-duplicate-selectors": null,
-  "property-no-vendor-prefix": null,
-  "selector-no-vendor-prefix": null,
-  "selector-pseudo-element-no-unknown": [
-   true,
-   {
-    "ignorePseudoElements": ["ng-deep"]
-   }
-  ],
-  "selector-type-no-unknown": [true, { "ignore": ["custom-elements", "default-namespace"] }],
-  "selector-class-pattern": [
-   "^[-_a-zA-Zñ0-9]+$",
-   {
-    "message": "Class selectors should only contain lowercase letters and dashes",
-    "severity": "warning"
-   }
-  ],
-  "selector-id-pattern": "^[a-zA-Z-ñÑ]+$",
-  "value-no-vendor-prefix": null
- }
+getArticle(category: Signal<string>, article: Signal<string>) {
+  // 1. Petición para obtener los metadatos del artículo
+  const metaDataResource = httpResource<PostDetailModel>(() => {
+    const cat = category();
+    const art = article();
+
+    if (!cat || !art) return undefined;
+
+    return `data/credito-zoom/articles/${cat}/${art}/metadata.json`;
+  });
+
+  // 2. Petición para obtener el contenido Markdown
+  const markdownResource = httpResource.text(() => {
+    const meta = metaDataResource.value();
+
+    // Si no hay metadatos o no especifican la ruta del .md, no hace la petición
+    if (!meta || !meta.contentMd) return undefined;
+
+    return `${meta.contentMd}`;
+  }, {
+    // INTERCEPTOR DE ERROR: Evita que el index.html se renderice como Markdown
+    transform: (text) => {
+      const cleanText = text.trim();
+      
+      if (cleanText.startsWith('<!DOCTYPE html>') || cleanText.startsWith('<html')) {
+        throw new Error('404: El archivo Markdown no existe en el servidor.');
+      }
+      
+      return text;
+    }
+  });
+
+  // 3. Retorno unificado de los recursos y estados reactivos
+  return {
+    metadata: metaDataResource,
+    markdown: markdownResource,
+
+    isLoading: computed(() => metaDataResource.isLoading() || markdownResource.isLoading()),
+    error: computed(() => metaDataResource.error() || markdownResource.error()),
+  };
 }
