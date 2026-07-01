@@ -1,0 +1,85 @@
+@use './breakpoints' as *;
+
+.about-cetelem {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @media (width <= $breakpoint-mobile) {
+    gap: 56px;
+  }
+
+  // Uso de BEM acoplado al anidamiento de SCSS para la imagen
+  &-image {
+    width: 100%;
+    border-radius: 16px;
+
+    @media (width <= $breakpoint-mobile) {
+      border-radius: 0;
+    }
+  }
+
+  // Contenedor interno (ya tiene .flexbox en el HTML)
+  .content {
+    justify-content: space-between;
+    gap: 40px; 
+    
+    // CORRECCIÓN RESPONSIVE: De fila a columna en tablets/móviles
+    @media (width <= $breakpoint-tablet) {
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    @media (width <= $breakpoint-mobile) {
+      gap: 40px;
+    }
+  }
+
+  .texts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 480px;
+
+    @media (width <= $breakpoint-tablet) {
+      max-width: 100%;
+    }
+
+    // El botón ya se extiende al 100% en tablet/mobile gracias a _common.scss
+    .button-wrapper {
+      width: fit-content;
+
+      @media (width <= $breakpoint-tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  .features-wrapper {
+    width: 100%;
+    max-width: 596px;
+
+    @media (width <= $breakpoint-tablet) {
+      max-width: 100%;
+    }
+  }
+
+  .features-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+
+    @media (width <= $breakpoint-tablet) {
+      gap: 40px;
+    }
+
+    @media (width <= $breakpoint-mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+  }
+}
