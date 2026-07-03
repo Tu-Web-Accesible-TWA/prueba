@@ -9,172 +9,148 @@
 $color-green-primary:    #3a913f;
 $color-green-link:       #337f37;
 $color-green-link-hover: #2e7232;
-$color-green-dark:       #1e852e;
-$color-green-darker:     #154734;
-$color-green-bubble-hover: #ebf4eb;
 $color-text-muted:       #4b4f54;
-$color-text-dark:        #111;
-$color-bubble-bg:        #f5f5f7;
 
 // ----------------------------
-// h2
+// Headings
 // ----------------------------
 h2 {
-  padding-left: 0;
   color: $color-green-primary;
+  padding-left: 0;
   padding-bottom: 0;
 }
 
-// ----------------------------
-// Bloque de contenido principal (.dvContentBlock)
-// ----------------------------
-.dvContentBlock {
-  padding-left: 0;
-  padding-right: 5.7%;
-  padding-bottom: 30px;
+h3 {
+  color: $color-green-primary;
+}
 
-  a {
-    color: $color-green-link;
-    font-weight: 500;
-    text-decoration: underline !important;
-    transition: color 300ms ease-out;
-
-    &:hover {
-      color: $color-green-link-hover;
-    }
-  }
+h4 {
+  color: $color-green-primary;
 }
 
 // ----------------------------
-// Enlace legal (.link-legal)
+// Párrafos
 // ----------------------------
-a.link-legal {
+p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+// ----------------------------
+// Links
+// ----------------------------
+a {
+  color: $color-green-link;
   font-weight: 500;
-  text-decoration: underline !important;
+  text-decoration: underline;
+  transition: color 300ms ease-out;
 
   &:hover {
-    text-decoration: underline !important;
+    color: $color-green-link-hover;
+    text-decoration: underline;
   }
 }
 
 // ----------------------------
-// Listas
+// Listas no ordenadas (ul)
 // ----------------------------
 ul {
-  margin: 10px 40px;
-}
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: disc;
 
-ol {
-  margin: 10px 0;
-}
-
-// ----------------------------
-// Bloque de texto (.txtBlock)
-// ----------------------------
-.txtBlock {
-  padding-left: 0;
-  padding-right: 5.7%;
-  padding-bottom: 0;
-}
-
-// ----------------------------
-// FAQ Accordion en páginas con clase "preguntas-frecuentes"
-// ----------------------------
-[class*="preguntas-frecuentes"] {
-  .faqAccordion {
-    h2 {
-      padding: 20px 0 0 0;
-    }
-  }
-}
-
-// ----------------------------
-// Breadcrumbs (.c-breadcrumbs)
-// ----------------------------
-.c-breadcrumbs {
-  list-style: none;
-  margin: 0;
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    padding: 40px 40px 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: 1024px) {
-    padding: 80px 80px 0;
-  }
-
-  // Icono home
-  .bubble-icon-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 100%;
-    background-color: $color-bubble-bg;
-    margin: 0 8px 0 0;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      background-color: $color-green-bubble-hover;
-
-      .ic-home .ic-svg-filled {
-        fill: $color-text-dark;
-      }
-    }
-
-    .ic-home {
-      width: 16px;
-      height: 16px;
-
-      .ic-svg-filled {
-        fill: $color-green-primary;
-        transition: all 0.2s ease-in-out;
-      }
-    }
-  }
-
-  // Items de lista
   li {
-    margin-right: 12px;
-    position: relative;
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
 
-    &:last-child {
-      margin-right: 0;
+  // Listas anidadas
+  ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    list-style-type: circle;
+  }
+}
 
-      span {
-        display: none;
-      }
+// ----------------------------
+// Listas ordenadas (ol)
+// ----------------------------
+ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding-left: 20px;
+  list-style-type: decimal;
 
-      a {
-        color: $color-text-muted;
-        cursor: default;
-        pointer-events: none;
-      }
+  li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+}
+
+// ----------------------------
+// strong / bold
+// ----------------------------
+strong {
+  font-weight: 700;
+}
+
+// ----------------------------
+// Tablas (usadas en /informacion-legal para formulario de desistimiento)
+// ----------------------------
+table {
+  border: 2px solid $color-text-muted;
+  padding: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+
+  td {
+    padding: 8px 15px;
+    border: 1px solid lighten($color-text-muted, 30%);
+    line-height: 1.5;
+
+    &[style*="text-align:center"] {
+      text-align: center;
     }
 
-    a {
-      color: $color-green-link;
-      text-decoration: none;
-      font-size: 12px;
-      transition: all 0.2s ease-in-out;
+    &[style*="text-align:left"] {
+      text-align: left;
+    }
+  }
+}
 
-      &:hover {
-        color: $color-green-link-hover;
-      }
+// ----------------------------
+// Details / Summary (accordion en /informacion-legal)
+// ----------------------------
+details {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 4px;
 
-      @media screen and (min-width: 768px) {
-        font-size: 14px;
-      }
+  summary {
+    cursor: pointer;
+    padding: 16px 0;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
     }
 
-    span {
-      display: inline-block;
-      margin-left: 12px;
+    &::marker {
+      display: none;
     }
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      color: $color-green-primary;
+      font-size: 1rem;
+    }
+  }
+
+  > div {
+    padding: 0 0 16px 0;
   }
 }
