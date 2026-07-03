@@ -1,0 +1,180 @@
+// ============================================================
+// CETELEM - Estilos comunes de contenido
+// Páginas: /accesibilidad, /seguridad, /landings/conoce-la-normativa-psd2, /informacion-legal
+// ============================================================
+
+// ----------------------------
+// Variables
+// ----------------------------
+$color-green-primary:    #3a913f;
+$color-green-link:       #337f37;
+$color-green-link-hover: #2e7232;
+$color-green-dark:       #1e852e;
+$color-green-darker:     #154734;
+$color-green-bubble-hover: #ebf4eb;
+$color-text-muted:       #4b4f54;
+$color-text-dark:        #111;
+$color-bubble-bg:        #f5f5f7;
+
+// ----------------------------
+// h2
+// ----------------------------
+h2 {
+  padding-left: 0;
+  color: $color-green-primary;
+  padding-bottom: 0;
+}
+
+// ----------------------------
+// Bloque de contenido principal (.dvContentBlock)
+// ----------------------------
+.dvContentBlock {
+  padding-left: 0;
+  padding-right: 5.7%;
+  padding-bottom: 30px;
+
+  a {
+    color: $color-green-link;
+    font-weight: 500;
+    text-decoration: underline !important;
+    transition: color 300ms ease-out;
+
+    &:hover {
+      color: $color-green-link-hover;
+    }
+  }
+}
+
+// ----------------------------
+// Enlace legal (.link-legal)
+// ----------------------------
+a.link-legal {
+  font-weight: 500;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+// ----------------------------
+// Listas
+// ----------------------------
+ul {
+  margin: 10px 40px;
+}
+
+ol {
+  margin: 10px 0;
+}
+
+// ----------------------------
+// Bloque de texto (.txtBlock)
+// ----------------------------
+.txtBlock {
+  padding-left: 0;
+  padding-right: 5.7%;
+  padding-bottom: 0;
+}
+
+// ----------------------------
+// FAQ Accordion en páginas con clase "preguntas-frecuentes"
+// ----------------------------
+[class*="preguntas-frecuentes"] {
+  .faqAccordion {
+    h2 {
+      padding: 20px 0 0 0;
+    }
+  }
+}
+
+// ----------------------------
+// Breadcrumbs (.c-breadcrumbs)
+// ----------------------------
+.c-breadcrumbs {
+  list-style: none;
+  margin: 0;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    padding: 40px 40px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 80px 80px 0;
+  }
+
+  // Icono home
+  .bubble-icon-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $color-bubble-bg;
+    margin: 0 8px 0 0;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-green-bubble-hover;
+
+      .ic-home .ic-svg-filled {
+        fill: $color-text-dark;
+      }
+    }
+
+    .ic-home {
+      width: 16px;
+      height: 16px;
+
+      .ic-svg-filled {
+        fill: $color-green-primary;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  // Items de lista
+  li {
+    margin-right: 12px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+
+      span {
+        display: none;
+      }
+
+      a {
+        color: $color-text-muted;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+
+    a {
+      color: $color-green-link;
+      text-decoration: none;
+      font-size: 12px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $color-green-link-hover;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 12px;
+    }
+  }
+}
