@@ -1,0 +1,71 @@
+// ============================================================
+// CETELEM - Estilos de tablas (Política de Cookies)
+// Aplicado directamente sobre etiquetas HTML sin atributos/clases
+// ============================================================
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  // Cabecera de la tabla principal
+  thead {
+    td {
+      font-weight: 700; // Equivalente a <strong>
+      padding: 10px 5px;
+      border-bottom: 2px solid #e8e8e8; // Ligero borde inferior para separar cabecera
+
+      // Anchos de columnas extraídos de los style inline
+      &:nth-child(1) {
+        width: 150px;
+      }
+      &:nth-child(2) {
+        width: 340px;
+      }
+      &:nth-child(3) {
+        width: 150px;
+      }
+    }
+  }
+
+  // Cuerpo de la tabla principal
+  tbody {
+    > tr {
+      > td {
+        vertical-align: top;
+        padding: 15px 5px;
+
+        // La segunda columna (Descripción) tiene padding específico y alineación
+        &:nth-child(2) {
+          padding: 18px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  // Tabla anidada (Detalle de cookies, antiguamente .cookiesDetailTable)
+  table {
+    width: 100%;
+    margin-top: 15px; // Espaciado desde el texto descriptivo
+    margin-bottom: 0;
+
+    thead td {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    tbody {
+      > tr {
+        > td {
+          // Estilos extraídos de la clase .cookiesDetailTable
+          text-align: left;
+          border: 0;
+          border-top: 1px solid #e8e8e8;
+          padding: 6px 0;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
