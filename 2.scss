@@ -66,3 +66,39 @@
     }
   }
 }
+
+:host ::ng-deep {
+
+  /* 1. ACTIVAR LA TRANSICIÓN */
+  /* Aplicamos la transición al contenedor del texto para que el cambio a verde sea fluido */
+  .sidebar-toggles .mat-mdc-button-toggle-label-content {
+    transition: all 0.25s ease-in-out !important;
+  }
+
+  /* También le aplicamos transición al indicador visual (la píldora verde) si quieres que aparezca suave */
+  .sidebar-toggles .mat-mdc-button-toggle-checked::after {
+    transition: all 0.2s ease-in-out !important;
+  }
+
+
+  /* 2. QUITAR EL CHECK / INPUT REBELDE */
+  /* Forzamos al input nativo oculto de Angular a desaparecer por completo */
+  .sidebar-toggles .mat-mdc-button-toggle-input {
+    opacity: 0 !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Por si acaso la última versión esté pintando un pseudo-checkbox o un icono SVG interno */
+  .sidebar-toggles {
+    .mat-pseudo-checkbox,
+    .mat-mdc-button-toggle-focus-overlay,
+    mat-icon,
+    svg {
+      display: none !important;
+    }
+  }
+}
