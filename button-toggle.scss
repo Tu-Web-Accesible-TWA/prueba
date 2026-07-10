@@ -1,0 +1,91 @@
+.custom-container {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  min-height: 500px;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+
+  .sidebar {
+    width: 260px;
+    min-width: 260px;
+    border-right: 1px solid #e2e8f0;
+    padding: 40px 0;
+
+    ::ng-deep {
+      mat-button-toggle-group {
+        border: none !important;
+        width: 100%;
+      }
+
+      .mat-mdc-button-toggle {
+        background-color: transparent !important;
+        border: none !important;
+        color: #4a5568 !important;
+        font-weight: 700;
+        font-size: 14px;
+        position: relative;
+        height: auto;
+        padding: 12px 24px;
+
+        .mat-mdc-button-toggle-text {
+          text-align: right !important;
+          white-space: normal !important;
+          width: 100%;
+          display: block;
+        }
+
+        .mat-mdc-button-toggle-focus-overlay {
+          background-color: transparent !important;
+        }
+      }
+
+      .mat-mdc-button-toggle-checked {
+        color: #136335 !important;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -1px;
+          top: 25%;
+          height: 50%;
+          width: 4px;
+          background-color: #136335;
+          border-radius: 4px 0 0 4px;
+        }
+      }
+    }
+  }
+
+  .content-area {
+    flex: 1;
+    padding: 40px 50px;
+    color: #2d3748;
+
+    ::ng-deep {
+      h2 {
+        font-size: 22px;
+        color: #000000;
+        font-weight: 700;
+        margin-bottom: 28px;
+      }
+
+      h3 {
+        font-size: 18px;
+        color: #000000;
+        font-weight: 700;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4a5568;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
