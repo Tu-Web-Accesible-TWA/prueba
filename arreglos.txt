@@ -1,85 +1,104 @@
-@use './breakpoints' as *;
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { OTPControlComponent } from './otp-control.component';
+import { fireEvent } from '@testing-library/angular';
 
-.about-cetelem {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+describe('OTPControlComponent', () => {
+  let component: OTPControlComponent;
+  let fixture: ComponentFixture<OTPControlComponent>;
 
-  @media (width <= $breakpoint-mobile) {
-    gap: 56px;
-  }
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [OTPControlComponent],
+    }).compileComponents();
 
-  // Uso de BEM acoplado al anidamiento de SCSS para la imagen
-  &-image {
-    width: 100%;
-    border-radius: 16px;
+    fixture = TestBed.createComponent(OTPControlComponent);
+    component = fixture.componentInstance;
+    component.config = {
+      size: 6,
+      regExp: /\d/,
+    };
+    fixture.detectChanges();
+  });
 
-    @media (width <= $breakpoint-mobile) {
-      border-radius: 0;
-    }
-  }
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-  // Contenedor interno (ya tiene .flexbox en el HTML)
-  .content {
-    justify-content: space-between;
-    gap: 40px; 
+  it('should check validity of the input typed', () => {
+    const inputElement = component.inputsArray.get(0)?.nativeElement as HTMLInputElement;
+    inputElement.value = '2'; // Simulamos que el input tiene el valor '2'
     
-    // CORRECCIÓN RESPONSIVE: De fila a columna en tablets/móviles
-    @media (width <= $breakpoint-tablet) {
-      flex-direction: column;
-      gap: 56px;
-    }
+    const mockEvent = { target: inputElement } as unknown as Event;
+    component.checkValidity(mockEvent, 0);
 
-    @media (width <= $breakpoint-mobile) {
-      gap: 40px;
-    }
-  }
+    // Como ahora el método es void y actualiza el modelo, verificamos el modelo
+    expect(component.OTPValue()).toContain('2');
+  });
 
-  .texts-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    gap: 40px;
-    width: 100%;
-    max-width: 480px;
+  it('should call check validity on typing', () => {
+    const checkValiditySpy = jest.spyOn(component, 'checkValidity');
+    const inputElement = component.inputsArray.get(0)?.nativeElement as HTMLInputElement;
 
-    @media (width <= $breakpoint-tablet) {
-      max-width: 100%;
-    }
+    // Cambiado de keyUp a input
+    fireEvent.input(inputElement, { target: { value: '2' } });
 
-    // El botón ya se extiende al 100% en tablet/mobile gracias a _common.scss
-    .button-wrapper {
-      width: fit-content;
+    expect(checkValiditySpy).toHaveBeenCalled();
+  });
 
-      @media (width <= $breakpoint-tablet) {
-        width: 100%;
-      }
-    }
-  }
+  it('should change final input when an input changes', () => {
+    const firstInputValue = '2';
+    const secondInputValue = '3';
+    const thirdInputValue = '4';
+    const handleInputSpy = jest.spyOn(component, 'checkValidity'); // O handleInputChange si aún lo conservas en el (change)
 
-  .features-wrapper {
-    width: 100%;
-    max-width: 596px;
+    const input0 = component.inputsArray.get(0)?.nativeElement as HTMLInputElement;
+    const input1 = component.inputsArray.get(1)?.nativeElement as HTMLInputElement;
+    const input2 = component.inputsArray.get(2)?.nativeElement as HTMLInputElement;
 
-    @media (width <= $breakpoint-tablet) {
-      max-width: 100%;
-    }
-  }
+    // Asignamos valor y disparamos el evento input
+    input0.value = firstInputValue;
+    fireEvent.input(input0, { target: { value: firstInputValue } });
+    
+    input1.value = secondInputValue;
+    fireEvent.input(input1, { target: { value: secondInputValue } });
+    
+    input2.value = thirdInputValue;
+    fireEvent.input(input2, { target: { value: thirdInputValue } });
 
-  .features-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
+    expect(component.OTPValue()).toEqual(firstInputValue + secondInputValue + thirdInputValue);
+  });
 
-    @media (width <= $breakpoint-tablet) {
-      gap: 40px;
-    }
+  it('should change focus to previous one if backspace or delete is pressed and index > 0', () => {
+    const handleKeyDownSpy = jest.spyOn(component, 'handleKeyDown');
+    const inputElement = component.inputsArray.get(1)?.nativeElement as HTMLInputElement;
+    
+    // Aseguramos que está vacío para que entre en la condición de retroceder foco
+    inputElement.value = ''; 
+    fireEvent.keyDown(inputElement, { key: 'Backspace', code: 'Backspace' });
 
-    @media (width <= $breakpoint-mobile) {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-      margin-bottom: 40px;
-    }
-  }
-}
+    expect(document.activeElement?.id).toBe('otp0');
+    expect(handleKeyDownSpy).toHaveBeenCalled();
+  });
+
+  it('should call handleFocusOnClick on click', () => {
+    const handleFocusOnClickSpy = jest.spyOn(component, 'handleFocusOnClick');
+    fireEvent.focus(component.inputsArray.get(0)?.nativeElement as HTMLInputElement);
+
+    expect(handleFocusOnClickSpy).toHaveBeenCalled();
+  });
+
+  it('should change final input on pasting a valid value', () => {
+    // CAMBIO IMPORTANTE: Debe ser string, no un número
+    const pasteValue = '145603'; 
+    const handlePasteSpy = jest.spyOn(component, 'handlePaste');
+    
+    fireEvent.paste(component.inputsArray.get(0)?.nativeElement as HTMLInputElement, {
+      clipboardData: {
+        getData: () => pasteValue,
+      },
+    });
+
+    expect(handlePasteSpy).toHaveBeenCalled();
+    expect(component.OTPValue()).toEqual(pasteValue);
+  });
+});
